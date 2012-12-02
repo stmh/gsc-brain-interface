@@ -1,15 +1,24 @@
-//
-//  AppDelegate.h
-//  GSC Brain Interface
-//
-//  Created by Stephan Huber on 02.12.12.
-//  Copyright (c) 2012 OpenSceneGraph. All rights reserved.
-//
+//Created by Thomas Hogarth 2009
+
+//force the link to our desired osgPlugins
+#include "osgPlugins.h"
+
+#include "IOSViewer.h"
+
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
+	
+	osg::ref_ptr<IOSViewer> _app;
+    CADisplayLink* _displayLink;
+
+}
+
+- (void)updateScene;
+
 
 @end
+

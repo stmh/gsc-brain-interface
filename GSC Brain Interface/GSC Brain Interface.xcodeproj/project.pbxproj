@@ -11,11 +11,22 @@
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
 		D4D6A20B166BABC7005BDE49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A209166BABC7005BDE49 /* InfoPlist.strings */; };
-		D4D6A20D166BABC7005BDE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A20C166BABC7005BDE49 /* main.m */; };
-		D4D6A211166BABC7005BDE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A210166BABC7005BDE49 /* AppDelegate.m */; };
 		D4D6A213166BABC7005BDE49 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A212166BABC7005BDE49 /* Default.png */; };
 		D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A214166BABC7005BDE49 /* Default@2x.png */; };
 		D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */; };
+		D4D6A223166BAC05005BDE49 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */; };
+		D4D6A224166BAC05005BDE49 /* IOSViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */; };
+		D4D6A225166BAC05005BDE49 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A221166BAC05005BDE49 /* main.mm */; };
+		D4D6A227166BAD64005BDE49 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A226166BAD64005BDE49 /* OpenGLES.framework */; };
+		D4D6A229166BAD6B005BDE49 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A228166BAD6B005BDE49 /* libz.dylib */; };
+		D4D6A22B166BAD71005BDE49 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A22A166BAD71005BDE49 /* CoreImage.framework */; };
+		D4D6A22D166BAE61005BDE49 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A22C166BAE61005BDE49 /* ImageIO.framework */; };
+		D4D6A22F166BAEBE005BDE49 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A22E166BAEBE005BDE49 /* Security.framework */; };
+		D4D6A231166BAFD2005BDE49 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A230166BAFD2005BDE49 /* QuartzCore.framework */; };
+		D4D6A233166BB044005BDE49 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A232166BB044005BDE49 /* Default-Portrait@2x~ipad.png */; };
+		D4D6A235166BB047005BDE49 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A234166BB047005BDE49 /* Default-Portrait~ipad.png */; };
+		D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */; };
+		D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +36,26 @@
 		D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D4D6A208166BABC7005BDE49 /* GSC Brain Interface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GSC Brain Interface-Info.plist"; sourceTree = "<group>"; };
 		D4D6A20A166BABC7005BDE49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D4D6A20C166BABC7005BDE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4D6A20E166BABC7005BDE49 /* GSC Brain Interface-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GSC Brain Interface-Prefix.pch"; sourceTree = "<group>"; };
-		D4D6A20F166BABC7005BDE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D4D6A210166BABC7005BDE49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D4D6A212166BABC7005BDE49 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D4D6A214166BABC7005BDE49 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D4D6A21D166BAC05005BDE49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSViewer.cpp; sourceTree = "<group>"; };
+		D4D6A220166BAC05005BDE49 /* IOSViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSViewer.h; sourceTree = "<group>"; };
+		D4D6A221166BAC05005BDE49 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D4D6A222166BAC05005BDE49 /* osgPlugins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osgPlugins.h; sourceTree = "<group>"; };
+		D4D6A226166BAD64005BDE49 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D4D6A228166BAD6B005BDE49 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D4D6A22A166BAD71005BDE49 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D4D6A22C166BAE61005BDE49 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D4D6A22E166BAEBE005BDE49 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D4D6A230166BAFD2005BDE49 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D4D6A232166BB044005BDE49 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		D4D6A234166BB047005BDE49 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +63,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D6A231166BAFD2005BDE49 /* QuartzCore.framework in Frameworks */,
+				D4D6A22F166BAEBE005BDE49 /* Security.framework in Frameworks */,
+				D4D6A22D166BAE61005BDE49 /* ImageIO.framework in Frameworks */,
+				D4D6A22B166BAD71005BDE49 /* CoreImage.framework in Frameworks */,
+				D4D6A229166BAD6B005BDE49 /* libz.dylib in Frameworks */,
+				D4D6A227166BAD64005BDE49 /* OpenGLES.framework in Frameworks */,
 				D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */,
 				D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */,
 				D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +98,12 @@
 		D4D6A1FF166BABC7005BDE49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4D6A230166BAFD2005BDE49 /* QuartzCore.framework */,
+				D4D6A22E166BAEBE005BDE49 /* Security.framework */,
+				D4D6A22C166BAE61005BDE49 /* ImageIO.framework */,
+				D4D6A22A166BAD71005BDE49 /* CoreImage.framework */,
+				D4D6A228166BAD6B005BDE49 /* libz.dylib */,
+				D4D6A226166BAD64005BDE49 /* OpenGLES.framework */,
 				D4D6A200166BABC7005BDE49 /* UIKit.framework */,
 				D4D6A202166BABC7005BDE49 /* Foundation.framework */,
 				D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */,
@@ -78,8 +114,12 @@
 		D4D6A206166BABC7005BDE49 /* GSC Brain Interface */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6A20F166BABC7005BDE49 /* AppDelegate.h */,
-				D4D6A210166BABC7005BDE49 /* AppDelegate.m */,
+				D4D6A21D166BAC05005BDE49 /* AppDelegate.h */,
+				D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */,
+				D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */,
+				D4D6A220166BAC05005BDE49 /* IOSViewer.h */,
+				D4D6A221166BAC05005BDE49 /* main.mm */,
+				D4D6A222166BAC05005BDE49 /* osgPlugins.h */,
 				D4D6A207166BABC7005BDE49 /* Supporting Files */,
 			);
 			path = "GSC Brain Interface";
@@ -88,9 +128,12 @@
 		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */,
+				D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */,
+				D4D6A234166BB047005BDE49 /* Default-Portrait~ipad.png */,
+				D4D6A232166BB044005BDE49 /* Default-Portrait@2x~ipad.png */,
 				D4D6A208166BABC7005BDE49 /* GSC Brain Interface-Info.plist */,
 				D4D6A209166BABC7005BDE49 /* InfoPlist.strings */,
-				D4D6A20C166BABC7005BDE49 /* main.m */,
 				D4D6A20E166BABC7005BDE49 /* GSC Brain Interface-Prefix.pch */,
 				D4D6A212166BABC7005BDE49 /* Default.png */,
 				D4D6A214166BABC7005BDE49 /* Default@2x.png */,
@@ -154,6 +197,10 @@
 				D4D6A213166BABC7005BDE49 /* Default.png in Resources */,
 				D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */,
 				D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */,
+				D4D6A233166BB044005BDE49 /* Default-Portrait@2x~ipad.png in Resources */,
+				D4D6A235166BB047005BDE49 /* Default-Portrait~ipad.png in Resources */,
+				D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */,
+				D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D6A20D166BABC7005BDE49 /* main.m in Sources */,
-				D4D6A211166BABC7005BDE49 /* AppDelegate.m in Sources */,
+				D4D6A223166BAC05005BDE49 /* AppDelegate.mm in Sources */,
+				D4D6A224166BAC05005BDE49 /* IOSViewer.cpp in Sources */,
+				D4D6A225166BAC05005BDE49 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,9 +284,43 @@
 		D4D6A21B166BABC7005BDE49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
 				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../libs/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"$(SRCROOT)/../libs/lib\"",
+					"\"$(SRCROOT)/../3rdParty-libs/device\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"$(SRCROOT)/../libs/lib\"",
+					"\"$(SRCROOT)/../3rdParty-libs/simulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-losgd",
+					"-losgDBd",
+					"-losgGAd",
+					"-losgUtild",
+					"-losgViewerd",
+					"-losgManipulatord",
+					"-losgTextd",
+					"-losgdb_zeroconfd",
+					"-losgdb_curld",
+					"-losgdb_imageiod",
+					"-losgdb_osgd",
+					"-losgdb_deprecated_osgd",
+					"-lcurl",
+					"-lOpenThreadsd",
+					"-losgdb_p3d",
+					"-losgPresentationd",
+					"-losgVolumed",
+					"-losgFXd",
+					"-losgdb_oscd",
+					"-losgdb_serializers_osgd",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -247,9 +329,43 @@
 		D4D6A21C166BABC7005BDE49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
 				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../libs/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"$(SRCROOT)/../libs/lib\"",
+					"\"$(SRCROOT)/../3rdParty-libs/device\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"$(SRCROOT)/../libs/lib\"",
+					"\"$(SRCROOT)/../3rdParty-libs/simulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-losg",
+					"-losgDB",
+					"-losgGA",
+					"-losgUtil",
+					"-losgViewer",
+					"-losgManipulator",
+					"-losgText",
+					"-losgdb_zeroconf",
+					"-losgdb_curl",
+					"-losgdb_imageio",
+					"-losgdb_osg",
+					"-losgdb_deprecated_osg",
+					"-lcurl",
+					"-lOpenThreads",
+					"-losgdb_p3d",
+					"-losgPresentation",
+					"-losgVolume",
+					"-losgFX",
+					"-losgdb_osc",
+					"-losgdb_serializers_osg",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
