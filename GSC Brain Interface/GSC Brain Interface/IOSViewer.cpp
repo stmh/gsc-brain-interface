@@ -9,16 +9,18 @@
 #include "IOSViewer.h"
 #include <osgDB/Registry>
 #include <osg/Texture2D>
+#include <osg/ValueObject>
 #include <osgGA/Device>
 #include <osgDB/ReadFile>
 #include <osgGA/TrackballManipulator>
 #include <osgGA/Device>
 #include <osgGA/GUIEventHandler>
+#include <stdlib.h>
 
 class ZeroConfDiscoverEventHandler : public osgGA::GUIEventHandler {
 public:
     ZeroConfDiscoverEventHandler(const std::string& type) : osgGA::GUIEventHandler(), _type(type) {}
-    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor*)
+    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
     {
         if (_oscDevice.valid())
         {
@@ -116,6 +118,18 @@ osg::Node* IOSViewer::setupHud()
     {
         osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(1024,0,0), osg::Vec3(0,786,0), 0, 0, 1, 1);
         
+        /*
+        osg::Vec4Array* colors = new osg::Vec4Array();
+        colors->push_back(osg::Vec4(1,1,1,1));
+        colors->push_back(osg::Vec4(1,1,1,1));
+        colors->push_back(osg::Vec4(1,1,1,1));
+        colors->push_back(osg::Vec4(1,1,1,1));
+        geometry->setColorArray(colors);
+        geometry->setColorBinding(osg::Geometry::BIND_PER_VERTEX);
+        
+        geometry->setNormalBinding(osg::Geometry::BIND_OFF);
+        */
+        
         osg::Texture2D* tex = new osg::Texture2D();
         tex->setImage(background_image);
         tex->setWrap(osg::Texture::WRAP_S, osg::Texture::CLAMP_TO_EDGE);
@@ -153,6 +167,7 @@ void IOSViewer::realize()
 {
     setThreadingModel(SingleThreaded);
     getEventQueue()->setFirstTouchEmulatesMouse(true);
+    setenv("OSG_GL_ERROR_CHECKING", "ON", 1);
     
     setCameraManipulator(new osgGA::TrackballManipulator());
     
@@ -183,7 +198,7 @@ void IOSViewer::realize()
     
     setSceneData(group);
     
-    osgViewer::Viewer::realize();   
+    osgViewer::Viewer::realize();
 }
 
 
