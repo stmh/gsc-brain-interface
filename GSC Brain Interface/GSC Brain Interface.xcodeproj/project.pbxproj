@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
+		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
+		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
+		D4D6A20B166BABC7005BDE49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A209166BABC7005BDE49 /* InfoPlist.strings */; };
+		D4D6A20D166BABC7005BDE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A20C166BABC7005BDE49 /* main.m */; };
+		D4D6A211166BABC7005BDE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A210166BABC7005BDE49 /* AppDelegate.m */; };
+		D4D6A213166BABC7005BDE49 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A212166BABC7005BDE49 /* Default.png */; };
+		D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A214166BABC7005BDE49 /* Default@2x.png */; };
+		D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSC Brain Interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4D6A208166BABC7005BDE49 /* GSC Brain Interface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GSC Brain Interface-Info.plist"; sourceTree = "<group>"; };
+		D4D6A20A166BABC7005BDE49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4D6A20C166BABC7005BDE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4D6A20E166BABC7005BDE49 /* GSC Brain Interface-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GSC Brain Interface-Prefix.pch"; sourceTree = "<group>"; };
+		D4D6A20F166BABC7005BDE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4D6A210166BABC7005BDE49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4D6A212166BABC7005BDE49 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D4D6A214166BABC7005BDE49 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4D6A1F9166BABC7005BDE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */,
+				D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */,
+				D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4D6A1F1166BABC7005BDE49 = {
+			isa = PBXGroup;
+			children = (
+				D4D6A206166BABC7005BDE49 /* GSC Brain Interface */,
+				D4D6A1FF166BABC7005BDE49 /* Frameworks */,
+				D4D6A1FD166BABC7005BDE49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4D6A1FD166BABC7005BDE49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4D6A1FF166BABC7005BDE49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6A200166BABC7005BDE49 /* UIKit.framework */,
+				D4D6A202166BABC7005BDE49 /* Foundation.framework */,
+				D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4D6A206166BABC7005BDE49 /* GSC Brain Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6A20F166BABC7005BDE49 /* AppDelegate.h */,
+				D4D6A210166BABC7005BDE49 /* AppDelegate.m */,
+				D4D6A207166BABC7005BDE49 /* Supporting Files */,
+			);
+			path = "GSC Brain Interface";
+			sourceTree = "<group>";
+		};
+		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6A208166BABC7005BDE49 /* GSC Brain Interface-Info.plist */,
+				D4D6A209166BABC7005BDE49 /* InfoPlist.strings */,
+				D4D6A20C166BABC7005BDE49 /* main.m */,
+				D4D6A20E166BABC7005BDE49 /* GSC Brain Interface-Prefix.pch */,
+				D4D6A212166BABC7005BDE49 /* Default.png */,
+				D4D6A214166BABC7005BDE49 /* Default@2x.png */,
+				D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4D6A1FB166BABC7005BDE49 /* GSC Brain Interface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "GSC Brain Interface" */;
+			buildPhases = (
+				D4D6A1F8166BABC7005BDE49 /* Sources */,
+				D4D6A1F9166BABC7005BDE49 /* Frameworks */,
+				D4D6A1FA166BABC7005BDE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GSC Brain Interface";
+			productName = "GSC Brain Interface";
+			productReference = D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4D6A1F3166BABC7005BDE49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = OpenSceneGraph;
+			};
+			buildConfigurationList = D4D6A1F6166BABC7005BDE49 /* Build configuration list for PBXProject "GSC Brain Interface" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4D6A1F1166BABC7005BDE49;
+			productRefGroup = D4D6A1FD166BABC7005BDE49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4D6A1FB166BABC7005BDE49 /* GSC Brain Interface */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4D6A1FA166BABC7005BDE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D6A20B166BABC7005BDE49 /* InfoPlist.strings in Resources */,
+				D4D6A213166BABC7005BDE49 /* Default.png in Resources */,
+				D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */,
+				D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4D6A1F8166BABC7005BDE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D6A20D166BABC7005BDE49 /* main.m in Sources */,
+				D4D6A211166BABC7005BDE49 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4D6A209166BABC7005BDE49 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4D6A20A166BABC7005BDE49 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4D6A218166BABC7005BDE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		D4D6A219166BABC7005BDE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4D6A21B166BABC7005BDE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
+				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4D6A21C166BABC7005BDE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
+				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4D6A1F6166BABC7005BDE49 /* Build configuration list for PBXProject "GSC Brain Interface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D6A218166BABC7005BDE49 /* Debug */,
+				D4D6A219166BABC7005BDE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "GSC Brain Interface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D6A21B166BABC7005BDE49 /* Debug */,
+				D4D6A21C166BABC7005BDE49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4D6A1F3166BABC7005BDE49 /* Project object */;
+}
