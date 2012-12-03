@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4D6A1FB166BABC7005BDE49"
-               BuildableName = "GSC Brain Interface.app"
+               BuildableName = "gsc brain interface.app"
                BlueprintName = "gsc brain interface"
                ReferencedContainer = "container:GSC Brain Interface.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D6A1FB166BABC7005BDE49"
-            BuildableName = "GSC Brain Interface.app"
+            BuildableName = "gsc brain interface.app"
             BlueprintName = "gsc brain interface"
             ReferencedContainer = "container:GSC Brain Interface.xcodeproj">
          </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D6A1FB166BABC7005BDE49"
-            BuildableName = "GSC Brain Interface.app"
+            BuildableName = "gsc brain interface.app"
             BlueprintName = "gsc brain interface"
             ReferencedContainer = "container:GSC Brain Interface.xcodeproj">
          </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D4D6A1FB166BABC7005BDE49"
-            BuildableName = "GSC Brain Interface.app"
+            BuildableName = "gsc brain interface.app"
             BlueprintName = "gsc brain interface"
             ReferencedContainer = "container:GSC Brain Interface.xcodeproj">
          </BuildableReference>

@@ -23,9 +23,15 @@ public:
     void readScene(const std::string& host, unsigned int port);
     void setStatusText(const std::string& status);
     
+    void showMaintenanceScene();
+    
 protected:
     osg::Node* setupHud();
+    
+    
+    
 private:
+    osg::ref_ptr<osg::Node>     _maintenanceScene;
     osg::ref_ptr<osgText::Text> _statusText;
 
 };
