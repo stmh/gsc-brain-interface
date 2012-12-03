@@ -30,7 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSC Brain Interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GSC Brain Interface.entitlements"; sourceTree = "<group>"; };
+		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,7 +91,7 @@
 		D4D6A1FD166BABC7005BDE49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */,
+				D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +115,7 @@
 		D4D6A206166BABC7005BDE49 /* GSC Brain Interface */ = {
 			isa = PBXGroup;
 			children = (
+				D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */,
 				D4D6A21D166BAC05005BDE49 /* AppDelegate.h */,
 				D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */,
 				D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */,
@@ -145,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4D6A1FB166BABC7005BDE49 /* GSC Brain Interface */ = {
+		D4D6A1FB166BABC7005BDE49 /* gsc brain interface */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "GSC Brain Interface" */;
+			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "gsc brain interface" */;
 			buildPhases = (
 				D4D6A1F8166BABC7005BDE49 /* Sources */,
 				D4D6A1F9166BABC7005BDE49 /* Frameworks */,
@@ -157,9 +159,9 @@
 			);
 			dependencies = (
 			);
-			name = "GSC Brain Interface";
+			name = "gsc brain interface";
 			productName = "GSC Brain Interface";
-			productReference = D4D6A1FC166BABC7005BDE49 /* GSC Brain Interface.app */;
+			productReference = D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +185,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4D6A1FB166BABC7005BDE49 /* GSC Brain Interface */,
+				D4D6A1FB166BABC7005BDE49 /* gsc brain interface */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +290,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "GSC Brain Interface/GSC Brain Interface.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
@@ -333,6 +336,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "GSC Brain Interface/GSC Brain Interface.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stephan Huber";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
@@ -369,6 +374,7 @@
 					"-losgdb_serializers_osg",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7390704C-FB0E-4703-90EA-20500DF4620E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -385,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "GSC Brain Interface" */ = {
+		D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "gsc brain interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4D6A21B166BABC7005BDE49 /* Debug */,
