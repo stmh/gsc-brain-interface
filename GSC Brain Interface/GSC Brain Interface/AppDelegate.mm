@@ -16,7 +16,8 @@
 	NSString* doc_folder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
 	_app = new IOSViewer();
-    _app->setDataFolder([doc_folder UTF8String]);
+    _app->addDataFolder([doc_folder UTF8String]);
+    _app->addDataFolder([[[NSBundle mainBundle] bundlePath] UTF8String]);
     _app->realize();
     _app->frame();
 	

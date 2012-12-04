@@ -12,13 +12,15 @@
 #include <osg/ValueObject>
 #include <osgGA/Device>
 #include <osgDB/ReadFile>
+#include <osgDB/FileUtils>
 #include <osgGA/TrackballManipulator>
 #include <osgGA/Device>
 #include <osgGA/GUIEventHandler>
 #include <stdlib.h>
 
 
-static double MAX_IDLE_TIME = 3*60.0;
+static const double MAX_IDLE_TIME = 3*60.0;
+static const char* INTERFACE_FILE_NAME = "interface.p3d";
 
 
 
@@ -112,7 +114,7 @@ public:
             osgViewer::View* view = dynamic_cast<osgViewer::View*>(&aa);
             if (view)
             {
-                OSG_ALWAYS << "resetting scene ..., idle timeout" << std::endl;
+                OSG_ALWAYS << "resetting scene ... idle timeout" << std::endl;
                 
                 view->getEventQueue()->keyPress(osgGA::GUIEventAdapter::KEY_Home);
                 view->getEventQueue()->keyRelease(osgGA::GUIEventAdapter::KEY_Home);
@@ -132,10 +134,12 @@ private:
 
 
 
-void IOSViewer::setDataFolder(const std::string& folder)
+void IOSViewer::addDataFolder(const std::string& folder)
 {
     osgDB::Registry::instance()->getDataFilePathList().push_front(folder);
+    OSG_NOTICE << "add data folder: " << folder << std::endl;
 }
+
 
 void IOSViewer::setStatusText(const std::string& status)
 {
@@ -153,7 +157,7 @@ void IOSViewer::showMaintenanceScene() {
 void IOSViewer::readScene(const std::string& host, unsigned int port)
 {
     std::ostringstream ss;
-    ss << "http://" << host << ":" << port << "/interface.p3d";
+    ss << "http://" << host << ":" << port << "/" << INTERFACE_FILE_NAME;
 
     std::cout << "reading interface from " << ss.str() << std::endl;
 
@@ -172,7 +176,7 @@ osg::Node* IOSViewer::setupHud()
 {
     osg::Camera* hudCamera = new osg::Camera;
     hudCamera->setReferenceFrame(osg::Transform::ABSOLUTE_RF);
-    hudCamera->setProjectionMatrixAsOrtho2D(0,1024,0,786);
+    hudCamera->setProjectionMatrixAsOrtho2D(0,2*1024,0,2*786);
     hudCamera->setViewMatrix(osg::Matrix::identity());
     hudCamera->setRenderOrder(osg::Camera::POST_RENDER);
     hudCamera->setClearMask(GL_DEPTH_BUFFER_BIT);
@@ -184,20 +188,8 @@ osg::Node* IOSViewer::setupHud()
     osg::Image* background_image = osgDB::readImageFile("Default-Landscape@2x~ipad.png");
     if (background_image)
     {
-        osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(1024,0,0), osg::Vec3(0,786,0), 0, 0, 1, 1);
-        
-        /*
-        osg::Vec4Array* colors = new osg::Vec4Array();
-        colors->push_back(osg::Vec4(1,1,1,1));
-        colors->push_back(osg::Vec4(1,1,1,1));
-        colors->push_back(osg::Vec4(1,1,1,1));
-        colors->push_back(osg::Vec4(1,1,1,1));
-        geometry->setColorArray(colors);
-        geometry->setColorBinding(osg::Geometry::BIND_PER_VERTEX);
-        
-        geometry->setNormalBinding(osg::Geometry::BIND_OFF);
-        */
-        
+        osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(2048,0,0), osg::Vec3(0,2*786,0), 0, 0, 1, 1);
+                
         osg::Texture2D* tex = new osg::Texture2D();
         tex->setImage(background_image);
         tex->setWrap(osg::Texture::WRAP_S, osg::Texture::CLAMP_TO_EDGE);
@@ -212,18 +204,18 @@ osg::Node* IOSViewer::setupHud()
         geode->addDrawable(geometry);
 
     }
-    
+    osg::setNotifyLevel(osg::DEBUG_INFO);
     _statusText = new osgText::Text();
     _statusText->setDataVariance(osg::Object::DYNAMIC);
-    _statusText->setFont("Arial.ttf");
+    _statusText->setFont("arial.ttf");
     _statusText->setPosition(osg::Vec3(20,20,0));
     _statusText->setColor(osg::Vec4(1,1,1,1));
     _statusText->setText("waiting for http-server/interface-file");
-    _statusText->setCharacterSize(10.0f);
+    _statusText->setCharacterSize(24.0f);
     _statusText->setAxisAlignment(osgText::TextBase::XY_PLANE);
     _statusText->getOrCreateStateSet()->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
     _statusText->getOrCreateStateSet()->setMode(GL_DEPTH_TEST, osg::StateAttribute::OFF);
-
+    osg::setNotifyLevel(osg::WARN);
     geode->addDrawable(_statusText);
     return hudCamera;
 }
@@ -237,9 +229,12 @@ void IOSViewer::realize()
     getEventQueue()->setFirstTouchEmulatesMouse(true);
     setenv("OSG_GL_ERROR_CHECKING", "ON", 1);
     
+    osg::DisplaySettings* settings = osg::DisplaySettings::instance();
+    settings->setNumMultiSamples(4);
+    
     setCameraManipulator(new osgGA::TrackballManipulator());
     
-    
+    std::string local_scene_file = osgDB::findDataFile(INTERFACE_FILE_NAME);
     
     // seup event handler
     addEventHandler(new IdleTimerEventHandler(MAX_IDLE_TIME));
@@ -273,6 +268,14 @@ void IOSViewer::realize()
     
     setSceneData(group);
     
+    if (!local_scene_file.empty())
+    {
+        osg::Node* node = osgDB::readNodeFile(local_scene_file);
+        if (node)
+            setSceneData(node);
+        else
+            setStatusText("could not read scene from local file "+ local_scene_file);
+    }
     osgViewer::Viewer::realize();
 }
 

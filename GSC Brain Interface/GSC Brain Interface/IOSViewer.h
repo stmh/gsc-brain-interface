@@ -15,7 +15,7 @@
 class IOSViewer : public osgViewer::Viewer {
 public:
     IOSViewer() : osgViewer::Viewer() {}
-    void setDataFolder(const std::string& folder);
+    void addDataFolder(const std::string& folder);
     void realize();
     void cleanup();
     void handleMemoryWarning();

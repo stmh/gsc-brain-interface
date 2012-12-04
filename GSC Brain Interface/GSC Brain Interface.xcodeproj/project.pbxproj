@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E5166DF44C002855AA /* Accelerate.framework */; };
+		D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E7166DF454002855AA /* MobileCoreServices.framework */; };
+		D42A48DE166E2AC6002855AA /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42A48DD166E2AC6002855AA /* arial.ttf */; };
 		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GSC Brain Interface.entitlements"; sourceTree = "<group>"; };
+		D42A47E5166DF44C002855AA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		D42A47E7166DF454002855AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D42A48DD166E2AC6002855AA /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = "../../../Projekte/cefix/3rdParty/OpenSceneGraph-Data/fonts/arial.ttf"; sourceTree = "<group>"; };
 		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */,
+				D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */,
 				D4D6A231166BAFD2005BDE49 /* QuartzCore.framework in Frameworks */,
 				D4D6A22F166BAEBE005BDE49 /* Security.framework in Frameworks */,
 				D4D6A22D166BAE61005BDE49 /* ImageIO.framework in Frameworks */,
@@ -82,6 +90,8 @@
 		D4D6A1F1166BABC7005BDE49 = {
 			isa = PBXGroup;
 			children = (
+				D42A47E7166DF454002855AA /* MobileCoreServices.framework */,
+				D42A47E5166DF44C002855AA /* Accelerate.framework */,
 				D4D6A206166BABC7005BDE49 /* GSC Brain Interface */,
 				D4D6A1FF166BABC7005BDE49 /* Frameworks */,
 				D4D6A1FD166BABC7005BDE49 /* Products */,
@@ -130,6 +140,7 @@
 		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D42A48DD166E2AC6002855AA /* arial.ttf */,
 				D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */,
 				D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */,
 				D4D6A234166BB047005BDE49 /* Default-Portrait~ipad.png */,
@@ -203,6 +214,7 @@
 				D4D6A235166BB047005BDE49 /* Default-Portrait~ipad.png in Resources */,
 				D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */,
 				D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */,
+				D42A48DE166E2AC6002855AA /* arial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +308,7 @@
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
 				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../libs/lib\"";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"\"$(SRCROOT)/../libs/lib\"",
@@ -326,6 +339,8 @@
 					"-losgFXd",
 					"-losgdb_oscd",
 					"-losgdb_serializers_osgd",
+					"-lfreetype",
+					"-losgdb_freetyped",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -343,6 +358,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
 				INFOPLIST_FILE = "GSC Brain Interface/GSC Brain Interface-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../libs/lib\"";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"\"$(SRCROOT)/../libs/lib\"",
@@ -373,6 +389,8 @@
 					"-losgFX",
 					"-losgdb_osc",
 					"-losgdb_serializers_osg",
+					"-lfreetype",
+					"-losgdb_freetype",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
