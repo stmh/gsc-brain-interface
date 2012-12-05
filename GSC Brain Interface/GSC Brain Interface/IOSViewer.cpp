@@ -13,124 +13,77 @@
 #include <osgGA/Device>
 #include <osgDB/ReadFile>
 #include <osgDB/FileUtils>
+#include <osgDB/FileNameUtils>
 #include <osgGA/TrackballManipulator>
 #include <osgGA/Device>
 #include <osgGA/GUIEventHandler>
 #include <stdlib.h>
+#include "ZeroConfDiscoverEventHandler.h"
+#include "IdleTimerEventHandler.h"
+
+
+class ScopedNotifyLevel {
+public:
+    ScopedNotifyLevel(osg::NotifySeverity new_level, const std::string& message = "")
+        : _oldLevel(osg::getNotifyLevel())
+        , _newLevel(new_level)
+        , _message(message)
+    {
+        osg::setNotifyLevel(new_level);
+        osg::notify(new_level) << "begin " << _message << std::endl;
+    }
+    
+    ~ScopedNotifyLevel()
+    {
+        osg::notify(_newLevel) << "end " << _message << std::endl;
+        osg::setNotifyLevel(_oldLevel);
+    }
+private:
+    osg::NotifySeverity _oldLevel, _newLevel;
+    std::string _message;
+};
 
 
 static const double MAX_IDLE_TIME = 3*60.0;
 static const char* INTERFACE_FILE_NAME = "interface.p3d";
 
-
-
-class ZeroConfDiscoverEventHandler : public osgGA::GUIEventHandler {
-public:
-    ZeroConfDiscoverEventHandler() : osgGA::GUIEventHandler() {}
-    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
+osgDB::Options* createOptions(const osgDB::ReaderWriter::Options* options)
+{
+    osg::ref_ptr<osgDB::Options> local_options = options ? options->cloneOptions() : 0;
+    if (!local_options)
     {
-        if (_oscDevice.valid())
-        {
-            _oscDevice->sendEvent(ea);
-        }
-        if (ea.getEventType() == osgGA::GUIEventAdapter::USER)
-        {
-            IOSViewer* viewer = dynamic_cast<IOSViewer*>(&aa);
-            if (!viewer)
-                return false;
-            
-            std::cout << "user-event: " << ea.getName() << std::endl;
-            
-            if (ea.getName() == "/zeroconf/service-added")
-            {
-                std::string host(""), type("");
-                unsigned int port(0);
-                
-                ea.getUserValue("host", host);
-                ea.getUserValue("port", port);
-                ea.getUserValue("type", type);
-                
-                if (type == httpServiceType())
-                {
-                    viewer->readScene(host, port);
-                }
-                else if (type == oscServiceType())
-                {
-                    startEventForwarding(viewer, host, port);
-                }
-            }
-            else if (ea.getName() == "/zeroconf/service-removed")
-            {
-                std::string type("");
-                ea.getUserValue("type", type);
-                
-                if (type == httpServiceType())
-                    viewer->showMaintenanceScene();
-                else if(type == oscServiceType())
-                    _oscDevice = NULL;
-            }
-        }
-        return false;
-    }
-    
-    void startEventForwarding(IOSViewer* viewer, const std::string& host, unsigned int port)
-    {
-        std::ostringstream ss;
-        ss << host << ":" << port << ".sender.osc";
-        std::cout << "sending events to " << ss.str() << std::endl;
-        _oscDevice = osgDB::readFile<osgGA::Device>(ss.str());
-        if (!_oscDevice.valid()) {
-            viewer->setStatusText("could not get osc-device: " + ss.str());
-        }
+        local_options = osgDB::Registry::instance()->getOptions() ?
+                osgDB::Registry::instance()->getOptions()->cloneOptions() :
+                new osgDB::Options;
     }
 
-    static const char* httpServiceType() { return "_p3d_http._tcp"; }
-    static const char* oscServiceType() { return "_p3d_osc._udp"; }
-    
-private:
-    osg::ref_ptr<osgGA::Device> _oscDevice;
-};
+    return local_options.release();
+}
 
+osg::ref_ptr<osg::Node> readHoldingSlide(const std::string& filename)
+{
+    std::string ext = osgDB::getFileExtension(filename);
+    if (!osgDB::equalCaseInsensitive(ext,"xml") && 
+        !osgDB::equalCaseInsensitive(ext,"p3d")) return 0;
 
+    osg::ref_ptr<osgDB::ReaderWriter::Options> options = createOptions(0);
+    options->setObjectCacheHint(osgDB::ReaderWriter::Options::CACHE_NONE);
+    options->setOptionString("preview");
 
+    return osgDB::readRefNodeFile(filename, options.get());
+}
 
-class IdleTimerEventHandler : public osgGA::GUIEventHandler {
-public:
-    IdleTimerEventHandler(double max_idle_time)
-        : osgGA::GUIEventHandler()
-        , _maxIdleTime(max_idle_time)
-    {
-    }
-    
-    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
-    {
-        if (ea.getEventType() != osgGA::GUIEventAdapter::FRAME)
-        {
-            _lastEventTimeStamp = ea.getTime();
-        }
-        
-        if (ea.getTime() > _lastEventTimeStamp + _maxIdleTime)
-        {
-            osgViewer::View* view = dynamic_cast<osgViewer::View*>(&aa);
-            if (view)
-            {
-                OSG_ALWAYS << "resetting scene ... idle timeout" << std::endl;
-                
-                view->getEventQueue()->keyPress(osgGA::GUIEventAdapter::KEY_Home);
-                view->getEventQueue()->keyRelease(osgGA::GUIEventAdapter::KEY_Home);
-                
-                view->getEventQueue()->keyPress(' ');
-                view->getEventQueue()->keyRelease(' ');
-            }
-            
-        }
-        
-        return false;
-    }
-private:
-    double _maxIdleTime, _lastEventTimeStamp;
-    
-};
+osg::ref_ptr<osg::Node> readPresentation(const std::string& filename,const osgDB::ReaderWriter::Options* options)
+{
+    std::string ext = osgDB::getFileExtension(filename);
+    if (!osgDB::equalCaseInsensitive(ext,"xml") &&
+        !osgDB::equalCaseInsensitive(ext,"p3d")) return 0;
+
+    osg::ref_ptr<osgDB::Options> local_options = createOptions(options);
+    local_options->setOptionString("main");
+
+    return osgDB::readRefNodeFile(filename, local_options.get());
+}
 
 
 
@@ -159,15 +112,21 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
     std::ostringstream ss;
     ss << "http://" << host << ":" << port << "/" << INTERFACE_FILE_NAME;
 
-    std::cout << "reading interface from " << ss.str() << std::endl;
+    OSG_NOTICE << "reading interface from " << ss.str() << std::endl;
 
-
-    osg::ref_ptr<osg::Node> node = osgDB::readNodeFile(ss.str());
+    // ScopedNotifyLevel l(osg::DEBUG_INFO, "READ SCENE DATA");
+    
+    osg::ref_ptr<osg::Node> node = readHoldingSlide(ss.str());
     if (!node)
         setStatusText("could not read interface from " + ss.str());
     else
+    {
         setSceneData(node);
-    
+        frame();
+        node = readPresentation(ss.str(), createOptions(0));
+        if(node)
+            setSceneData(node);
+    }
 }
 
 
@@ -204,7 +163,6 @@ osg::Node* IOSViewer::setupHud()
         geode->addDrawable(geometry);
 
     }
-    osg::setNotifyLevel(osg::DEBUG_INFO);
     _statusText = new osgText::Text();
     _statusText->setDataVariance(osg::Object::DYNAMIC);
     _statusText->setFont("arial.ttf");
@@ -215,7 +173,6 @@ osg::Node* IOSViewer::setupHud()
     _statusText->setAxisAlignment(osgText::TextBase::XY_PLANE);
     _statusText->getOrCreateStateSet()->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
     _statusText->getOrCreateStateSet()->setMode(GL_DEPTH_TEST, osg::StateAttribute::OFF);
-    osg::setNotifyLevel(osg::WARN);
     geode->addDrawable(_statusText);
     return hudCamera;
 }

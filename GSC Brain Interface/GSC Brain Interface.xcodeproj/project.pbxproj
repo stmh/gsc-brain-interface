@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D412F62A166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */; };
+		D412F62E166F3FF60094569C /* IdleTimerEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */; };
+		D412F630166F558D0094569C /* ipad-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D412F62F166F558D0094569C /* ipad-icon.png */; };
+		D412F632166F55960094569C /* ipad-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D412F631166F55960094569C /* ipad-icon@2x.png */; };
 		D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E5166DF44C002855AA /* Accelerate.framework */; };
 		D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E7166DF454002855AA /* MobileCoreServices.framework */; };
 		D42A48DE166E2AC6002855AA /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42A48DD166E2AC6002855AA /* arial.ttf */; };
@@ -34,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GSC Brain Interface.entitlements"; sourceTree = "<group>"; };
+		D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZeroConfDiscoverEventHandler.cpp; sourceTree = "<group>"; };
+		D412F629166F3F2B0094569C /* ZeroConfDiscoverEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZeroConfDiscoverEventHandler.h; sourceTree = "<group>"; };
+		D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdleTimerEventHandler.cpp; sourceTree = "<group>"; };
+		D412F62D166F3FF60094569C /* IdleTimerEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleTimerEventHandler.h; sourceTree = "<group>"; };
+		D412F62F166F558D0094569C /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon.png"; sourceTree = "<group>"; };
+		D412F631166F55960094569C /* ipad-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon@2x.png"; sourceTree = "<group>"; };
 		D42A47E5166DF44C002855AA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D42A47E7166DF454002855AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D42A48DD166E2AC6002855AA /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = "../../../Projekte/cefix/3rdParty/OpenSceneGraph-Data/fonts/arial.ttf"; sourceTree = "<group>"; };
@@ -90,6 +100,8 @@
 		D4D6A1F1166BABC7005BDE49 = {
 			isa = PBXGroup;
 			children = (
+				D412F631166F55960094569C /* ipad-icon@2x.png */,
+				D412F62F166F558D0094569C /* ipad-icon.png */,
 				D42A47E7166DF454002855AA /* MobileCoreServices.framework */,
 				D42A47E5166DF44C002855AA /* Accelerate.framework */,
 				D4D6A206166BABC7005BDE49 /* GSC Brain Interface */,
@@ -133,6 +145,10 @@
 				D4D6A221166BAC05005BDE49 /* main.mm */,
 				D4D6A222166BAC05005BDE49 /* osgPlugins.h */,
 				D4D6A207166BABC7005BDE49 /* Supporting Files */,
+				D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */,
+				D412F629166F3F2B0094569C /* ZeroConfDiscoverEventHandler.h */,
+				D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */,
+				D412F62D166F3FF60094569C /* IdleTimerEventHandler.h */,
 			);
 			path = "GSC Brain Interface";
 			sourceTree = "<group>";
@@ -215,6 +231,8 @@
 				D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */,
 				D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */,
 				D42A48DE166E2AC6002855AA /* arial.ttf in Resources */,
+				D412F630166F558D0094569C /* ipad-icon.png in Resources */,
+				D412F632166F55960094569C /* ipad-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +246,8 @@
 				D4D6A223166BAC05005BDE49 /* AppDelegate.mm in Sources */,
 				D4D6A224166BAC05005BDE49 /* IOSViewer.cpp in Sources */,
 				D4D6A225166BAC05005BDE49 /* main.mm in Sources */,
+				D412F62A166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp in Sources */,
+				D412F62E166F3FF60094569C /* IdleTimerEventHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +361,7 @@
 					"-losgdb_serializers_osgd",
 					"-lfreetype",
 					"-losgdb_freetyped",
+					"-losgdb_avfoundationd",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -391,6 +412,7 @@
 					"-losgdb_serializers_osg",
 					"-lfreetype",
 					"-losgdb_freetype",
+					"-lavfoundation",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

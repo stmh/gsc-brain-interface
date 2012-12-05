@@ -8,65 +8,52 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376321704.402004"
+         timestampString = "376393884.249061"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "279"
-         endingLineNumber = "279"
+         startingLineNumber = "236"
+         endingLineNumber = "236"
          landmarkName = "IOSViewer::realize()"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376311050.170551"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
-         landmarkName = "handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "7">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376311050.170551"
+         timestampString = "376394193.715515"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
-         landmarkName = "handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "7">
+         startingLineNumber = "168"
+         endingLineNumber = "168"
+         landmarkName = "IOSViewer::setupHud()"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376311050.170551"
+         filePath = "../../osg/src/osgText/Font.cpp"
+         timestampString = "376394232.122534"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
-         landmarkName = "handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "7">
+         startingLineNumber = "173"
+         endingLineNumber = "173"
+         landmarkName = "osgText::readRefFontFile(const std::string&amp; filename, const osgDB::ReaderWriter::Options* userOptions)"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376311050.170551"
+         filePath = "../../osg/src/osgPresentation/SlideShowConstructor.cpp"
+         timestampString = "376394301.377264"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
-         landmarkName = "handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "7">
+         startingLineNumber = "742"
+         endingLineNumber = "742"
+         landmarkName = "SlideShowConstructor::addParagraph(const std::string&amp; paragraph, PositionData&amp; positionData, FontData&amp; fontData)"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

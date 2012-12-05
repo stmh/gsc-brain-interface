@@ -109,3 +109,5 @@ USE_OSGPLUGIN(osg2)
 
 USE_OSGPLUGIN(freetype)
 
+USE_OSGPLUGIN(avfoundation)
+
