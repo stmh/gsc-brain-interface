@@ -20,9 +20,8 @@
     _app->addDataFolder([[[NSBundle mainBundle] bundlePath] UTF8String]);
     _app->realize();
     _app->frame();
-	
-	_displayLink = [application.keyWindow.screen displayLinkWithTarget:self selector:@selector(updateScene)];
-    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    _displayLink = NULL;
 }
 
 
@@ -36,12 +35,18 @@
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-
+    [_displayLink invalidate];
+    // _app->pause();
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-
+    if (_displayLink)
+        [_displayLink release];
+    
+    _displayLink = [application.keyWindow.screen displayLinkWithTarget:self selector:@selector(updateScene)];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    // _app->unpause();
 }
 
 -(void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -55,6 +60,8 @@
 
 
 - (void)dealloc {
+    [_displayLink release];
+    
     _app->cleanup();
 	_app = NULL;
     [super dealloc];

@@ -8,29 +8,29 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376393884.249061"
+         timestampString = "376403721.898201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "236"
-         endingLineNumber = "236"
+         startingLineNumber = "262"
+         endingLineNumber = "262"
          landmarkName = "IOSViewer::realize()"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376394193.715515"
+         timestampString = "376403721.898201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "168"
-         endingLineNumber = "168"
+         startingLineNumber = "194"
+         endingLineNumber = "194"
          landmarkName = "IOSViewer::setupHud()"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgText/Font.cpp"
@@ -53,6 +53,123 @@
          startingLineNumber = "742"
          endingLineNumber = "742"
          landmarkName = "SlideShowConstructor::addParagraph(const std::string&amp; paragraph, PositionData&amp; positionData, FontData&amp; fontData)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "376403721.898201"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "158"
+         endingLineNumber = "158"
+         landmarkName = "IOSViewer::setupHud()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationCoreVideoTexture.cpp"
+         timestampString = "376402874.096943"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
+         landmarkName = "OSXAVFoundationCoreVideoTexture::apply(osg::State&amp; state)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationVideo.mm"
+         timestampString = "376402988.360046"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "304"
+         endingLineNumber = "304"
+         landmarkName = "OSXAVFoundationVideo::open(const std::string&amp; filename)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationVideo.mm"
+         timestampString = "376403133.660254"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "406"
+         endingLineNumber = "406"
+         landmarkName = "OSXAVFoundationVideo::decodeFrame()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationVideo.mm"
+         timestampString = "376403176.445348"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "429"
+         endingLineNumber = "429"
+         landmarkName = "OSXAVFoundationVideo::decodeFrame()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/AppDelegate.mm"
+         timestampString = "376406187.560997"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-applicationDidBecomeActive:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationVideo.mm"
+         timestampString = "376405799.615911"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "436"
+         endingLineNumber = "436"
+         landmarkName = "OSXAVFoundationVideo::decodeFrame()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/AppDelegate.mm"
+         timestampString = "376406187.560997"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "-applicationWillResignActive:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationCoreVideoTexture.cpp"
+         timestampString = "376406222.868431"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
+         landmarkName = "OSXAVFoundationCoreVideoTexture::setImage(osg::Image* image)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

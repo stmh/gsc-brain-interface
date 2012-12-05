@@ -11,10 +11,17 @@
 
 #include <osgViewer/Viewer>
 #include <osgText/Text>
+#include <osg/ImageStream>
 
 class IOSViewer : public osgViewer::Viewer {
 public:
-    IOSViewer() : osgViewer::Viewer() {}
+    IOSViewer()
+        : osgViewer::Viewer()
+        , _maintenanceScene(NULL)
+        , _statusText(NULL)
+        , _maintenanceMovie(NULL)
+    {
+    }
     void addDataFolder(const std::string& folder);
     void realize();
     void cleanup();
@@ -33,5 +40,6 @@ protected:
 private:
     osg::ref_ptr<osg::Node>     _maintenanceScene;
     osg::ref_ptr<osgText::Text> _statusText;
+    osg::ref_ptr<osg::ImageStream> _maintenanceMovie;
 
 };

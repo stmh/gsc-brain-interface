@@ -11,9 +11,13 @@
 		D412F62E166F3FF60094569C /* IdleTimerEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */; };
 		D412F630166F558D0094569C /* ipad-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D412F62F166F558D0094569C /* ipad-icon.png */; };
 		D412F632166F55960094569C /* ipad-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D412F631166F55960094569C /* ipad-icon@2x.png */; };
+		D412F65A166F6BFA0094569C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D412F659166F6BFA0094569C /* AVFoundation.framework */; };
+		D412F65C166F6C010094569C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D412F65B166F6C010094569C /* CoreVideo.framework */; };
+		D412F65E166F6C160094569C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D412F65D166F6C160094569C /* CoreMedia.framework */; };
 		D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E5166DF44C002855AA /* Accelerate.framework */; };
 		D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E7166DF454002855AA /* MobileCoreServices.framework */; };
 		D42A48DE166E2AC6002855AA /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42A48DD166E2AC6002855AA /* arial.ttf */; };
+		D4BA0FF9166F7D6C00BC449F /* background-idle-movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */; };
 		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
@@ -44,9 +48,13 @@
 		D412F62D166F3FF60094569C /* IdleTimerEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleTimerEventHandler.h; sourceTree = "<group>"; };
 		D412F62F166F558D0094569C /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon.png"; sourceTree = "<group>"; };
 		D412F631166F55960094569C /* ipad-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon@2x.png"; sourceTree = "<group>"; };
+		D412F659166F6BFA0094569C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D412F65B166F6C010094569C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D412F65D166F6C160094569C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D42A47E5166DF44C002855AA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D42A47E7166DF454002855AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D42A48DD166E2AC6002855AA /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = "../../../Projekte/cefix/3rdParty/OpenSceneGraph-Data/fonts/arial.ttf"; sourceTree = "<group>"; };
+		D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "background-idle-movie.mov"; path = "assets/background-idle-movie.mov"; sourceTree = SOURCE_ROOT; };
 		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D412F65E166F6C160094569C /* CoreMedia.framework in Frameworks */,
+				D412F65C166F6C010094569C /* CoreVideo.framework in Frameworks */,
+				D412F65A166F6BFA0094569C /* AVFoundation.framework in Frameworks */,
 				D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */,
 				D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */,
 				D4D6A231166BAFD2005BDE49 /* QuartzCore.framework in Frameworks */,
@@ -100,6 +111,9 @@
 		D4D6A1F1166BABC7005BDE49 = {
 			isa = PBXGroup;
 			children = (
+				D412F65D166F6C160094569C /* CoreMedia.framework */,
+				D412F65B166F6C010094569C /* CoreVideo.framework */,
+				D412F659166F6BFA0094569C /* AVFoundation.framework */,
 				D412F631166F55960094569C /* ipad-icon@2x.png */,
 				D412F62F166F558D0094569C /* ipad-icon.png */,
 				D42A47E7166DF454002855AA /* MobileCoreServices.framework */,
@@ -144,6 +158,7 @@
 				D4D6A220166BAC05005BDE49 /* IOSViewer.h */,
 				D4D6A221166BAC05005BDE49 /* main.mm */,
 				D4D6A222166BAC05005BDE49 /* osgPlugins.h */,
+				D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */,
 				D4D6A207166BABC7005BDE49 /* Supporting Files */,
 				D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */,
 				D412F629166F3F2B0094569C /* ZeroConfDiscoverEventHandler.h */,
@@ -233,6 +248,7 @@
 				D42A48DE166E2AC6002855AA /* arial.ttf in Resources */,
 				D412F630166F558D0094569C /* ipad-icon.png in Resources */,
 				D412F632166F55960094569C /* ipad-icon@2x.png in Resources */,
+				D4BA0FF9166F7D6C00BC449F /* background-idle-movie.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +428,7 @@
 					"-losgdb_serializers_osg",
 					"-lfreetype",
 					"-losgdb_freetype",
-					"-lavfoundation",
+					"-losgdb_avfoundation",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

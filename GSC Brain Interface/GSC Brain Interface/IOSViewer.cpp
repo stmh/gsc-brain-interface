@@ -10,6 +10,7 @@
 #include <osgDB/Registry>
 #include <osg/Texture2D>
 #include <osg/ValueObject>
+#include <osg/ImageStream>
 #include <osgGA/Device>
 #include <osgDB/ReadFile>
 #include <osgDB/FileUtils>
@@ -105,6 +106,9 @@ void IOSViewer::showMaintenanceScene() {
     setSceneData(_maintenanceScene);
     getEventQueue()->keyPress(' ');
     getEventQueue()->keyRelease(' ');
+    
+    if (_maintenanceMovie.valid())
+        _maintenanceMovie->play();
 }
 
 void IOSViewer::readScene(const std::string& host, unsigned int port)
@@ -126,6 +130,9 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         node = readPresentation(ss.str(), createOptions(0));
         if(node)
             setSceneData(node);
+        
+        if (_maintenanceMovie.valid())
+            _maintenanceMovie->pause();
     }
 }
 
@@ -142,15 +149,34 @@ osg::Node* IOSViewer::setupHud()
     
      osg::Geode* geode = new osg::Geode();
     hudCamera->addChild(geode);
+    
+    
 
-
-    osg::Image* background_image = osgDB::readImageFile("Default-Landscape@2x~ipad.png");
+    osg::ref_ptr<osg::Image> background_image(NULL);
+    osg::ref_ptr<osg::Texture> tex(NULL);
+    
+    background_image = osgDB::readImageFile("background-idle-movie.mov");
+    if (background_image)
+    {
+        _maintenanceMovie = dynamic_cast<osg::ImageStream*>(background_image.get());
+        if(_maintenanceMovie.valid())
+        {
+            // TODO: Fix CoreVideo tex = _maintenanceMovie->createSuitableTexture();
+            _maintenanceMovie->setLoopingMode(osg::ImageStream::LOOPING);
+            _maintenanceMovie->play();
+        }
+    }
+    else
+    {
+        background_image = osgDB::readImageFile("Default-Landscape@2x~ipad.png");
+    }
     if (background_image)
     {
         osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(2048,0,0), osg::Vec3(0,2*786,0), 0, 0, 1, 1);
                 
-        osg::Texture2D* tex = new osg::Texture2D();
-        tex->setImage(background_image);
+        if (!tex) {
+            tex = new osg::Texture2D(background_image);
+        }
         tex->setWrap(osg::Texture::WRAP_S, osg::Texture::CLAMP_TO_EDGE);
         tex->setWrap(osg::Texture::WRAP_T, osg::Texture::CLAMP_TO_EDGE);
         tex->setResizeNonPowerOfTwoHint(false);
