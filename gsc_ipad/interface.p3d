@@ -7,6 +7,7 @@
 -->
 <presentation>
 <env>OSG_STEREO=OFF</env>
+<env>P3D_DEVICE=192.168.0.90:9000.sender.osc</env>
 
 <holding_slide>
 <duration></duration>
@@ -31,19 +32,19 @@
   <paragraph hud="on" position="0.35 0.3 0.01" font="fonts/nevis.ttf" character_size="0.03">idle movie on main screen</paragraph>
     
     <!-- menu -->
-    <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image  position="0.13 0.5 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.5 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.5 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.5 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.5 0.01" scale="0.16">but5.png</image>
     
     
@@ -68,26 +69,26 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
     
     <!-- movie control -->
     
     <!-- restart movie from beginning -->
-    <click_to_event slide_name="section vh" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section vh" layer_name="start">31</click_to_event>
     <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
     <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
      
@@ -95,22 +96,22 @@
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -127,19 +128,19 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
@@ -147,22 +148,22 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -178,39 +179,39 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -223,39 +224,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -269,39 +270,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -316,39 +317,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section vh" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
 
 
@@ -373,26 +374,26 @@
     
      <!-- top menu -->
     
-    <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
     <!-- movie control -->
     
     <!-- restart movie from beginning -->
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">31</click_to_event>
     <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
     <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
      
@@ -400,22 +401,22 @@
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -432,19 +433,19 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
@@ -452,22 +453,22 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -483,39 +484,39 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -529,39 +530,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -575,39 +576,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -622,39 +623,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section ct" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
 
 
@@ -673,19 +674,19 @@
     
     
    <!-- top menu -->
-   <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+   <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
@@ -700,22 +701,22 @@
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -732,19 +733,19 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
@@ -752,22 +753,22 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -783,39 +784,39 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -828,39 +829,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -874,39 +875,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -921,39 +922,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section mri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
 
 
@@ -972,25 +973,25 @@
     
     
    <!-- top menu -->
-    <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
      
      <!-- movie control -->
     
     <!-- restart movie from beginning -->
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">31</click_to_event>
     <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
     <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
      
@@ -998,22 +999,22 @@
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1030,19 +1031,19 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
@@ -1050,22 +1051,22 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1081,39 +1082,39 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1126,39 +1127,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -1172,39 +1173,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -1219,39 +1220,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section fmri" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
 
 
@@ -1271,26 +1272,26 @@
     
     
    <!-- top menu -->
-  <click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+  <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
     <!-- movie control -->
     
     <!-- restart movie from beginning -->
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">31</click_to_event>
     <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
     <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
      
@@ -1298,22 +1299,22 @@
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1330,19 +1331,19 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
@@ -1350,22 +1351,22 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1381,39 +1382,39 @@
     
      <!-- top menu -->
      
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
       
@@ -1426,39 +1427,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -1472,39 +1473,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
 
@@ -1519,39 +1520,39 @@
     
     
      <!-- top menu -->
-	<click_to_event  slide_name="section vh" layer_name="start">*</click_to_event>
+	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
     <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
     
-    <click_to_event slide_name="section ct" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
     <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
     
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
     <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
     
-    <click_to_event slide_name="section fmri" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
     <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
     
-    <click_to_event slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section trk" layer_name="start">*</click_to_event>
+    <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
      <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="help">*</click_to_event>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
      <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="one">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="two">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
      <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="three">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
      <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
      
-     <click_to_event  slide_name="section trk" layer_name="four">*</click_to_event>
+     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
 
 
