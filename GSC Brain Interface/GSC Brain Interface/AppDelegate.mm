@@ -1,8 +1,8 @@
 //Created by Thomas Hogarth 2009
 
 #import "AppDelegate.h"
-
-
+#import "Testflight.h"
+#define TESTING
 
 
 @implementation AppDelegate
@@ -13,7 +13,13 @@
 //
 - (void)applicationDidFinishLaunching:(UIApplication *)application 
 {
-	NSString* doc_folder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    #ifdef TESTING
+    
+	[TestFlight takeOff:@"8d28e8c9dd4f4488134a230b2f66c940_MTYwODIxMjAxMi0xMi0wNyAxMjozMjoxNy40MDM5ODU"];
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+#endif
+    
+    NSString* doc_folder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
 	_app = new IOSViewer();
     _app->addDataFolder([doc_folder UTF8String]);

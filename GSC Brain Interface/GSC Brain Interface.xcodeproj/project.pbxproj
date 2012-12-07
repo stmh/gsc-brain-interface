@@ -109,6 +109,7 @@
 		D450A1F61671FC7B003A6A02 /* osgdb_curld.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_curld.so; path = ../../../osg/build/lib/osgdb_curld.so; sourceTree = "<group>"; };
 		D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_freetyped.so; path = ../../../osg/build/lib/osgdb_freetyped.so; sourceTree = "<group>"; };
 		D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_QTKitd.so; path = ../../../osg/build/lib/osgdb_QTKitd.so; sourceTree = "<group>"; };
+		D4A2CFE016725F8100DFB201 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = "../../3rdParty-libs/include/TestFlight.h"; sourceTree = "<group>"; };
 		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -244,6 +245,7 @@
 			children = (
 				D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */,
 				D4D6A21D166BAC05005BDE49 /* AppDelegate.h */,
+				D4A2CFE016725F8100DFB201 /* TestFlight.h */,
 				D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */,
 				D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */,
 				D4D6A220166BAC05005BDE49 /* IOSViewer.h */,
@@ -527,6 +529,8 @@
 					"-losgViewerd",
 					"-losgManipulatord",
 					"-losgTextd",
+					"-ltestflight",
+					"-lz",
 					"-losgdb_zeroconfd",
 					"-losgdb_curld",
 					"-losgdb_imageiod",
@@ -594,6 +598,8 @@
 					"-lfreetype",
 					"-losgdb_freetype",
 					"-losgdb_avfoundation",
+					"-ltestflight",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
