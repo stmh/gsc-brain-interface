@@ -17,7 +17,25 @@
 		D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E5166DF44C002855AA /* Accelerate.framework */; };
 		D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E7166DF454002855AA /* MobileCoreServices.framework */; };
 		D42A48DE166E2AC6002855AA /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42A48DD166E2AC6002855AA /* arial.ttf */; };
-		D4BA0FF9166F7D6C00BC449F /* background-idle-movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */; };
+		D450A1D51671F6FD003A6A02 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D450A1D41671F6FD003A6A02 /* main.mm */; };
+		D450A1E21671F903003A6A02 /* OpenThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DB1671F903003A6A02 /* OpenThreads.framework */; };
+		D450A1E31671F903003A6A02 /* osg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DC1671F903003A6A02 /* osg.framework */; };
+		D450A1E41671F903003A6A02 /* osgDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DD1671F903003A6A02 /* osgDB.framework */; };
+		D450A1E51671F903003A6A02 /* osgGA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DE1671F903003A6A02 /* osgGA.framework */; };
+		D450A1E61671F903003A6A02 /* osgText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DF1671F903003A6A02 /* osgText.framework */; };
+		D450A1E71671F903003A6A02 /* osgUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1E01671F903003A6A02 /* osgUtil.framework */; };
+		D450A1E81671F903003A6A02 /* osgViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1E11671F903003A6A02 /* osgViewer.framework */; };
+		D450A1E91671F94E003A6A02 /* IOSViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */; };
+		D450A1EA1671F962003A6A02 /* ZeroConfDiscoverEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */; };
+		D450A1EB1671F962003A6A02 /* IdleTimerEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */; };
+		D450A1F11671FC0A003A6A02 /* osgdb_imageiod.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1EC1671FBE8003A6A02 /* osgdb_imageiod.so */; };
+		D450A1F21671FC0A003A6A02 /* osgdb_oscd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1ED1671FBE8003A6A02 /* osgdb_oscd.so */; };
+		D450A1F31671FC0A003A6A02 /* osgdb_p3dd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1EE1671FBE8003A6A02 /* osgdb_p3dd.so */; };
+		D450A1F41671FC0A003A6A02 /* osgdb_resthttpd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1EF1671FBE8003A6A02 /* osgdb_resthttpd.so */; };
+		D450A1F51671FC0A003A6A02 /* osgdb_zeroconfd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F01671FBE8003A6A02 /* osgdb_zeroconfd.so */; };
+		D450A1F71671FC7E003A6A02 /* osgdb_curld.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F61671FC7B003A6A02 /* osgdb_curld.so */; };
+		D450A1F91671FCE1003A6A02 /* osgdb_freetyped.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */; };
+		D450A1FB16721065003A6A02 /* osgdb_QTKitd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */; };
 		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
@@ -40,21 +58,57 @@
 		D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D450A1CF1671F6FD003A6A02 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D450A1F11671FC0A003A6A02 /* osgdb_imageiod.so in CopyFiles */,
+				D450A1FB16721065003A6A02 /* osgdb_QTKitd.so in CopyFiles */,
+				D450A1F91671FCE1003A6A02 /* osgdb_freetyped.so in CopyFiles */,
+				D450A1F21671FC0A003A6A02 /* osgdb_oscd.so in CopyFiles */,
+				D450A1F31671FC0A003A6A02 /* osgdb_p3dd.so in CopyFiles */,
+				D450A1F41671FC0A003A6A02 /* osgdb_resthttpd.so in CopyFiles */,
+				D450A1F71671FC7E003A6A02 /* osgdb_curld.so in CopyFiles */,
+				D450A1F51671FC0A003A6A02 /* osgdb_zeroconfd.so in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D40F0ED3166CB1C600D08F79 /* GSC Brain Interface.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GSC Brain Interface.entitlements"; sourceTree = "<group>"; };
 		D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZeroConfDiscoverEventHandler.cpp; sourceTree = "<group>"; };
 		D412F629166F3F2B0094569C /* ZeroConfDiscoverEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZeroConfDiscoverEventHandler.h; sourceTree = "<group>"; };
 		D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdleTimerEventHandler.cpp; sourceTree = "<group>"; };
 		D412F62D166F3FF60094569C /* IdleTimerEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleTimerEventHandler.h; sourceTree = "<group>"; };
-		D412F62F166F558D0094569C /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon.png"; sourceTree = "<group>"; };
-		D412F631166F55960094569C /* ipad-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-icon@2x.png"; sourceTree = "<group>"; };
+		D412F62F166F558D0094569C /* ipad-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ipad-icon.png"; path = "../ipad-icon.png"; sourceTree = "<group>"; };
+		D412F631166F55960094569C /* ipad-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ipad-icon@2x.png"; path = "../ipad-icon@2x.png"; sourceTree = "<group>"; };
 		D412F659166F6BFA0094569C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D412F65B166F6C010094569C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D412F65D166F6C160094569C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D42A47E5166DF44C002855AA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D42A47E7166DF454002855AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D42A48DD166E2AC6002855AA /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = "../../../Projekte/cefix/3rdParty/OpenSceneGraph-Data/fonts/arial.ttf"; sourceTree = "<group>"; };
-		D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "background-idle-movie.mov"; path = "assets/background-idle-movie.mov"; sourceTree = SOURCE_ROOT; };
+		D450A1D11671F6FD003A6A02 /* gsc brain interface osx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gsc brain interface osx"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D450A1D41671F6FD003A6A02 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D450A1DB1671F903003A6A02 /* OpenThreads.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenThreads.framework; path = ../../../osg/build/lib/OpenThreads.framework; sourceTree = "<group>"; };
+		D450A1DC1671F903003A6A02 /* osg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osg.framework; path = ../../../osg/build/lib/osg.framework; sourceTree = "<group>"; };
+		D450A1DD1671F903003A6A02 /* osgDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgDB.framework; path = ../../../osg/build/lib/osgDB.framework; sourceTree = "<group>"; };
+		D450A1DE1671F903003A6A02 /* osgGA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgGA.framework; path = ../../../osg/build/lib/osgGA.framework; sourceTree = "<group>"; };
+		D450A1DF1671F903003A6A02 /* osgText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgText.framework; path = ../../../osg/build/lib/osgText.framework; sourceTree = "<group>"; };
+		D450A1E01671F903003A6A02 /* osgUtil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgUtil.framework; path = ../../../osg/build/lib/osgUtil.framework; sourceTree = "<group>"; };
+		D450A1E11671F903003A6A02 /* osgViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgViewer.framework; path = ../../../osg/build/lib/osgViewer.framework; sourceTree = "<group>"; };
+		D450A1EC1671FBE8003A6A02 /* osgdb_imageiod.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_imageiod.so; path = ../../../osg/build/lib/osgdb_imageiod.so; sourceTree = "<group>"; };
+		D450A1ED1671FBE8003A6A02 /* osgdb_oscd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_oscd.so; path = ../../../osg/build/lib/osgdb_oscd.so; sourceTree = "<group>"; };
+		D450A1EE1671FBE8003A6A02 /* osgdb_p3dd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_p3dd.so; path = ../../../osg/build/lib/osgdb_p3dd.so; sourceTree = "<group>"; };
+		D450A1EF1671FBE8003A6A02 /* osgdb_resthttpd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_resthttpd.so; path = ../../../osg/build/lib/osgdb_resthttpd.so; sourceTree = "<group>"; };
+		D450A1F01671FBE8003A6A02 /* osgdb_zeroconfd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_zeroconfd.so; path = ../../../osg/build/lib/osgdb_zeroconfd.so; sourceTree = "<group>"; };
+		D450A1F61671FC7B003A6A02 /* osgdb_curld.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_curld.so; path = ../../../osg/build/lib/osgdb_curld.so; sourceTree = "<group>"; };
+		D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_freetyped.so; path = ../../../osg/build/lib/osgdb_freetyped.so; sourceTree = "<group>"; };
+		D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_QTKitd.so; path = ../../../osg/build/lib/osgdb_QTKitd.so; sourceTree = "<group>"; };
 		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +138,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D450A1CE1671F6FD003A6A02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D450A1E21671F903003A6A02 /* OpenThreads.framework in Frameworks */,
+				D450A1E31671F903003A6A02 /* osg.framework in Frameworks */,
+				D450A1E41671F903003A6A02 /* osgDB.framework in Frameworks */,
+				D450A1E51671F903003A6A02 /* osgGA.framework in Frameworks */,
+				D450A1E61671F903003A6A02 /* osgText.framework in Frameworks */,
+				D450A1E71671F903003A6A02 /* osgUtil.framework in Frameworks */,
+				D450A1E81671F903003A6A02 /* osgViewer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D6A1F9166BABC7005BDE49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,17 +176,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D450A1D31671F6FD003A6A02 /* gsc brain interface osx */ = {
+			isa = PBXGroup;
+			children = (
+				D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */,
+				D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */,
+				D450A1F61671FC7B003A6A02 /* osgdb_curld.so */,
+				D450A1EC1671FBE8003A6A02 /* osgdb_imageiod.so */,
+				D450A1ED1671FBE8003A6A02 /* osgdb_oscd.so */,
+				D450A1EE1671FBE8003A6A02 /* osgdb_p3dd.so */,
+				D450A1EF1671FBE8003A6A02 /* osgdb_resthttpd.so */,
+				D450A1F01671FBE8003A6A02 /* osgdb_zeroconfd.so */,
+				D450A1DB1671F903003A6A02 /* OpenThreads.framework */,
+				D450A1DC1671F903003A6A02 /* osg.framework */,
+				D450A1DD1671F903003A6A02 /* osgDB.framework */,
+				D450A1DE1671F903003A6A02 /* osgGA.framework */,
+				D450A1DF1671F903003A6A02 /* osgText.framework */,
+				D450A1E01671F903003A6A02 /* osgUtil.framework */,
+				D450A1E11671F903003A6A02 /* osgViewer.framework */,
+				D450A1D41671F6FD003A6A02 /* main.mm */,
+			);
+			path = "gsc brain interface osx";
+			sourceTree = "<group>";
+		};
 		D4D6A1F1166BABC7005BDE49 = {
 			isa = PBXGroup;
 			children = (
-				D412F65D166F6C160094569C /* CoreMedia.framework */,
-				D412F65B166F6C010094569C /* CoreVideo.framework */,
-				D412F659166F6BFA0094569C /* AVFoundation.framework */,
-				D412F631166F55960094569C /* ipad-icon@2x.png */,
-				D412F62F166F558D0094569C /* ipad-icon.png */,
-				D42A47E7166DF454002855AA /* MobileCoreServices.framework */,
-				D42A47E5166DF44C002855AA /* Accelerate.framework */,
 				D4D6A206166BABC7005BDE49 /* GSC Brain Interface */,
+				D450A1D31671F6FD003A6A02 /* gsc brain interface osx */,
 				D4D6A1FF166BABC7005BDE49 /* Frameworks */,
 				D4D6A1FD166BABC7005BDE49 /* Products */,
 			);
@@ -128,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */,
+				D450A1D11671F6FD003A6A02 /* gsc brain interface osx */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +221,11 @@
 		D4D6A1FF166BABC7005BDE49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D42A47E7166DF454002855AA /* MobileCoreServices.framework */,
+				D42A47E5166DF44C002855AA /* Accelerate.framework */,
+				D412F65D166F6C160094569C /* CoreMedia.framework */,
+				D412F65B166F6C010094569C /* CoreVideo.framework */,
+				D412F659166F6BFA0094569C /* AVFoundation.framework */,
 				D4D6A230166BAFD2005BDE49 /* QuartzCore.framework */,
 				D4D6A22E166BAEBE005BDE49 /* Security.framework */,
 				D4D6A22C166BAE61005BDE49 /* ImageIO.framework */,
@@ -158,7 +249,6 @@
 				D4D6A220166BAC05005BDE49 /* IOSViewer.h */,
 				D4D6A221166BAC05005BDE49 /* main.mm */,
 				D4D6A222166BAC05005BDE49 /* osgPlugins.h */,
-				D4BA0FF8166F7D6C00BC449F /* background-idle-movie.mov */,
 				D4D6A207166BABC7005BDE49 /* Supporting Files */,
 				D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */,
 				D412F629166F3F2B0094569C /* ZeroConfDiscoverEventHandler.h */,
@@ -171,6 +261,8 @@
 		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D412F631166F55960094569C /* ipad-icon@2x.png */,
+				D412F62F166F558D0094569C /* ipad-icon.png */,
 				D42A48DD166E2AC6002855AA /* arial.ttf */,
 				D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */,
 				D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */,
@@ -189,6 +281,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D450A1D01671F6FD003A6A02 /* gsc brain interface osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D450A1D81671F6FD003A6A02 /* Build configuration list for PBXNativeTarget "gsc brain interface osx" */;
+			buildPhases = (
+				D450A1CD1671F6FD003A6A02 /* Sources */,
+				D450A1CE1671F6FD003A6A02 /* Frameworks */,
+				D450A1CF1671F6FD003A6A02 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gsc brain interface osx";
+			productName = "gsc brain interface osx";
+			productReference = D450A1D11671F6FD003A6A02 /* gsc brain interface osx */;
+			productType = "com.apple.product-type.tool";
+		};
 		D4D6A1FB166BABC7005BDE49 /* gsc brain interface */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "gsc brain interface" */;
@@ -228,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				D4D6A1FB166BABC7005BDE49 /* gsc brain interface */,
+				D450A1D01671F6FD003A6A02 /* gsc brain interface osx */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +358,23 @@
 				D42A48DE166E2AC6002855AA /* arial.ttf in Resources */,
 				D412F630166F558D0094569C /* ipad-icon.png in Resources */,
 				D412F632166F55960094569C /* ipad-icon@2x.png in Resources */,
-				D4BA0FF9166F7D6C00BC449F /* background-idle-movie.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D450A1CD1671F6FD003A6A02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D450A1EA1671F962003A6A02 /* ZeroConfDiscoverEventHandler.cpp in Sources */,
+				D450A1EB1671F962003A6A02 /* IdleTimerEventHandler.cpp in Sources */,
+				D450A1E91671F94E003A6A02 /* IOSViewer.cpp in Sources */,
+				D450A1D51671F6FD003A6A02 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D6A1F8166BABC7005BDE49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +401,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D450A1D91671F6FD003A6A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../osg/build/lib\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../osg/include\"",
+					"\"$(SRCROOT)/../../osg/build/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		D450A1DA1671F6FD003A6A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../osg/build/lib\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../osg/include\"",
+					"\"$(SRCROOT)/../../osg/build/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
 		D4D6A218166BABC7005BDE49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,7 +492,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7390704C-FB0E-4703-90EA-20500DF4620E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "10DD963C-94C5-46CD-8715-B5B0A2A667C4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -438,6 +603,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D450A1D81671F6FD003A6A02 /* Build configuration list for PBXNativeTarget "gsc brain interface osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D450A1D91671F6FD003A6A02 /* Debug */,
+				D450A1DA1671F6FD003A6A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4D6A1F6166BABC7005BDE49 /* Build configuration list for PBXProject "GSC Brain Interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

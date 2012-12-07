@@ -18,6 +18,7 @@
 }
 
 - (void)updateScene;
+- (void)removeDisplayLink;
 
 
 @end

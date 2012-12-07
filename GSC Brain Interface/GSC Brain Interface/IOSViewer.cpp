@@ -98,6 +98,7 @@ void IOSViewer::addDataFolder(const std::string& folder)
 void IOSViewer::setStatusText(const std::string& status)
 {
     _statusText->setText(status);
+    OSG_NOTICE << status << std::endl;
 }
 
 
@@ -109,10 +110,14 @@ void IOSViewer::showMaintenanceScene() {
     
     if (_maintenanceMovie.valid())
         _maintenanceMovie->play();
+    _sceneLoaded = false;
 }
 
 void IOSViewer::readScene(const std::string& host, unsigned int port)
 {
+    if (_sceneLoaded)
+        return;
+    
     std::ostringstream ss;
     ss << "http://" << host << ":" << port << "/" << INTERFACE_FILE_NAME;
 
@@ -128,9 +133,10 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         setSceneData(node);
         frame();
         node = readPresentation(ss.str(), createOptions(0));
-        if(node)
+        if(node) {
             setSceneData(node);
-        
+            _sceneLoaded = true;
+        }
         if (_maintenanceMovie.valid())
             _maintenanceMovie->pause();
     }
@@ -142,7 +148,7 @@ osg::Node* IOSViewer::setupHud()
 {
     osg::Camera* hudCamera = new osg::Camera;
     hudCamera->setReferenceFrame(osg::Transform::ABSOLUTE_RF);
-    hudCamera->setProjectionMatrixAsOrtho2D(0,2*1024,0,2*786);
+    hudCamera->setProjectionMatrixAsOrtho2D(0,2*1024,0,2*768);
     hudCamera->setViewMatrix(osg::Matrix::identity());
     hudCamera->setRenderOrder(osg::Camera::POST_RENDER);
     hudCamera->setClearMask(GL_DEPTH_BUFFER_BIT);
@@ -172,7 +178,7 @@ osg::Node* IOSViewer::setupHud()
     }
     if (background_image)
     {
-        osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(2048,0,0), osg::Vec3(0,2*786,0), 0, 0, 1, 1);
+        osg::Geometry* geometry = osg::createTexturedQuadGeometry(osg::Vec3(0,0,0), osg::Vec3(2048,0,0), osg::Vec3(0,2*768,0), 0, 0, 1, 1);
                 
         if (!tex) {
             tex = new osg::Texture2D(background_image);
@@ -215,6 +221,10 @@ void IOSViewer::realize()
     osg::DisplaySettings* settings = osg::DisplaySettings::instance();
     settings->setNumMultiSamples(4);
     
+    // setup scene
+    osg::Group* group = new osg::Group();
+    group->addChild(setupHud());
+    
     setCameraManipulator(new osgGA::TrackballManipulator());
     
     std::string local_scene_file = osgDB::findDataFile(INTERFACE_FILE_NAME);
@@ -241,11 +251,6 @@ void IOSViewer::realize()
             setStatusText("could not get zeroconf-device: " + (*i));
     }
     
-    
-    
-    // setup scene
-    osg::Group* group = new osg::Group();
-    group->addChild(setupHud());
     
     _maintenanceScene = group;
     

@@ -41,5 +41,6 @@ private:
     osg::ref_ptr<osg::Node>     _maintenanceScene;
     osg::ref_ptr<osgText::Text> _statusText;
     osg::ref_ptr<osg::ImageStream> _maintenanceMovie;
+    bool _sceneLoaded;
 
 };

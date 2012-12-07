@@ -33,34 +33,45 @@
 }
 
 
+- (void)removeDisplayLink
+{
+    if (_displayLink)
+        [_displayLink invalidate];
+    _displayLink = NULL;
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    [_displayLink invalidate];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [self removeDisplayLink];
     // _app->pause();
 }
 
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    if (_displayLink)
-        [_displayLink release];
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{    
+    [self removeDisplayLink];
     
     _displayLink = [application.keyWindow.screen displayLinkWithTarget:self selector:@selector(updateScene)];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     // _app->unpause();
 }
 
--(void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
     _app->handleMemoryWarning();
 }
 
--(void)applicationWillTerminate:(UIApplication *)application{
-    [_displayLink invalidate];
+-(void)applicationWillTerminate:(UIApplication *)application
+{
+    [self removeDisplayLink];
 } 
 
 
 
-- (void)dealloc {
-    [_displayLink release];
+- (void)dealloc
+{
+    [self removeDisplayLink];
     
     _app->cleanup();
 	_app = NULL;

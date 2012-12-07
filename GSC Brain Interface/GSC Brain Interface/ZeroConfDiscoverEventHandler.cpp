@@ -40,7 +40,7 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
             {
                 viewer->readScene(host, port);
             }
-            else if (type == oscServiceType())
+            else if (type == oscServiceType() && (!_oscDevice.valid()))
             {
                 startEventForwarding(viewer, host, port);
             }
@@ -63,9 +63,12 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
 {
     std::ostringstream ss;
     ss << host << ":" << port << ".sender.osc";
-    std::cout << "sending events to " << ss.str() << std::endl;
+    
     _oscDevice = osgDB::readFile<osgGA::Device>(ss.str());
-    if (!_oscDevice.valid()) {
+    if (!_oscDevice.valid())
+    {
         viewer->setStatusText("could not get osc-device: " + ss.str());
+    } else {
+        std::cout << "sending events to " << ss.str() << std::endl;
     }
 }
