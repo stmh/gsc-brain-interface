@@ -11,14 +11,16 @@
 #include <sstream>
 #include <osgDB/ReadFile>
 #include <osg/ValueObject>
+#include "IOSViewer.h"
 
 
 bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
 {
-    if (_oscDevice.valid())
+    for(DeviceList::iterator i = _devices.begin(); i != _devices.end(); ++i)
     {
-        _oscDevice->sendEvent(ea);
+        (*i)->sendEvent(ea);
     }
+    
     if (ea.getEventType() == osgGA::GUIEventAdapter::USER)
     {
         IOSViewer* viewer = dynamic_cast<IOSViewer*>(&aa);
@@ -40,7 +42,7 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
             {
                 viewer->readScene(host, port);
             }
-            else if (type == oscServiceType() && (!_oscDevice.valid()))
+            else if (type == oscServiceType() && (!_discoveredDevice.valid()))
             {
                 startEventForwarding(viewer, host, port);
             }
@@ -53,7 +55,10 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
             if (type == httpServiceType())
                 viewer->showMaintenanceScene();
             else if(type == oscServiceType())
-                _oscDevice = NULL;
+            {
+                removeDevice(_discoveredDevice);
+                _discoveredDevice = NULL;
+            }
         }
     }
     return false;
@@ -64,11 +69,13 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     std::ostringstream ss;
     ss << host << ":" << port << ".sender.osc";
     
-    _oscDevice = osgDB::readFile<osgGA::Device>(ss.str());
-    if (!_oscDevice.valid())
+    _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str());
+    if (!_discoveredDevice.valid())
     {
         viewer->setStatusText("could not get osc-device: " + ss.str());
-    } else {
+        addDevice(_discoveredDevice.get());
+    }
+    else {
         std::cout << "sending events to " << ss.str() << std::endl;
     }
 }

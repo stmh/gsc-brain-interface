@@ -110,12 +110,49 @@ void IOSViewer::showMaintenanceScene() {
     
     if (_maintenanceMovie.valid())
         _maintenanceMovie->play();
-    _sceneLoaded = false;
+    _sceneLoaded = _isLocalScene = false;
+    checkForLocalFile();
+}
+
+void IOSViewer::checkEnvVars()
+{
+    const char* p3dDevice = getenv("P3D_DEVICE");
+    if (p3dDevice)
+    {
+        osgDB::StringList devices;
+        osgDB::split(p3dDevice, devices);
+        bool first(true);
+        for(osgDB::StringList::iterator i = devices.begin(); i != devices.end(); ++i)
+        {
+            osg::ref_ptr<osgGA::Device> dev = osgDB::readFile<osgGA::Device>(*i);
+            if (dev.valid())
+            {
+                OSG_INFO << "Adding Device : " << *i << std::endl;
+                if (dev->getCapabilities() & osgGA::Device::RECEIVE_EVENTS)
+                    addDevice(dev.get());
+                
+                if (dev->getCapabilities() & osgGA::Device::SEND_EVENTS)
+                {
+                    if (first)
+                    {
+                        _zeroconfEventHandler->removeAllDevices();
+                        first = false;
+                    }
+                    _zeroconfEventHandler->addDevice(dev);
+                }
+                    
+            }
+            else
+            {
+                OSG_WARN << "could not open device: " << *i << std::endl;
+            }
+        }
+    }
 }
 
 void IOSViewer::readScene(const std::string& host, unsigned int port)
 {
-    if (_sceneLoaded)
+    if (_sceneLoaded && !_isLocalScene)
         return;
     
     std::ostringstream ss;
@@ -136,10 +173,13 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         if(node) {
             setSceneData(node);
             _sceneLoaded = true;
+            _isLocalScene = false;
         }
         if (_maintenanceMovie.valid())
             _maintenanceMovie->pause();
     }
+    
+    checkEnvVars();
 }
 
 
@@ -209,7 +249,23 @@ osg::Node* IOSViewer::setupHud()
     return hudCamera;
 }
 
-
+void IOSViewer::checkForLocalFile()
+{
+    if (_sceneLoaded) return;
+    std::string local_scene_file = osgDB::findDataFile(INTERFACE_FILE_NAME);
+    
+    if (!local_scene_file.empty())
+    {
+        osg::Node* node = osgDB::readNodeFile(local_scene_file);
+        if (node) {
+            setSceneData(node);
+            checkEnvVars();
+            _sceneLoaded = _isLocalScene = true;
+        }
+        else
+            setStatusText("could not read scene from local file "+ local_scene_file);
+    }
+}
 
 
 void IOSViewer::realize()
@@ -227,11 +283,10 @@ void IOSViewer::realize()
     
     setCameraManipulator(new osgGA::TrackballManipulator());
     
-    std::string local_scene_file = osgDB::findDataFile(INTERFACE_FILE_NAME);
-    
     // seup event handler
+    _zeroconfEventHandler = new ZeroConfDiscoverEventHandler();
     addEventHandler(new IdleTimerEventHandler(MAX_IDLE_TIME));
-    addEventHandler(new ZeroConfDiscoverEventHandler());
+    addEventHandler(_zeroconfEventHandler);
     
     
     // setup zeroconf
@@ -256,14 +311,8 @@ void IOSViewer::realize()
     
     setSceneData(group);
     
-    if (!local_scene_file.empty())
-    {
-        osg::Node* node = osgDB::readNodeFile(local_scene_file);
-        if (node)
-            setSceneData(node);
-        else
-            setStatusText("could not read scene from local file "+ local_scene_file);
-    }
+    checkForLocalFile();
+    
     osgViewer::Viewer::realize();
 }
 
