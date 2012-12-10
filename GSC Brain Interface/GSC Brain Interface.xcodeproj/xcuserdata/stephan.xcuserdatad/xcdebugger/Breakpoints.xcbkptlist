@@ -8,24 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376403721.898201"
+         timestampString = "376769242.96185"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "262"
-         endingLineNumber = "262"
-         landmarkName = "IOSViewer::realize()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376403721.898201"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "194"
-         endingLineNumber = "194"
+         startingLineNumber = "234"
+         endingLineNumber = "234"
          landmarkName = "IOSViewer::setupHud()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -43,7 +30,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/SlideShowConstructor.cpp"
@@ -56,15 +43,15 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376403721.898201"
+         timestampString = "376769242.96185"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "158"
-         endingLineNumber = "158"
+         startingLineNumber = "198"
+         endingLineNumber = "198"
          landmarkName = "IOSViewer::setupHud()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -82,7 +69,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPlugins/avfoundation/OSXAVFoundationVideo.mm"
@@ -130,7 +117,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "47"
          endingLineNumber = "47"
-         landmarkName = "-applicationDidBecomeActive:"
+         landmarkName = "-removeDisplayLink"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -147,7 +134,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/AppDelegate.mm"
@@ -156,7 +143,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "38"
          endingLineNumber = "38"
-         landmarkName = "-applicationWillResignActive:"
+         landmarkName = "-updateScene"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -170,6 +157,32 @@
          startingLineNumber = "119"
          endingLineNumber = "119"
          landmarkName = "OSXAVFoundationCoreVideoTexture::setImage(osg::Image* image)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "376769242.96185"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "254"
+         endingLineNumber = "254"
+         landmarkName = "IOSViewer::checkForLocalFile()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "376769242.96185"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "182"
+         endingLineNumber = "182"
+         landmarkName = "IOSViewer::readScene(const std::string&amp; host, unsigned int port)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

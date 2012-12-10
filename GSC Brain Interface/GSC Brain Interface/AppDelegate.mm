@@ -60,7 +60,8 @@
     
     _displayLink = [application.keyWindow.screen displayLinkWithTarget:self selector:@selector(updateScene)];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    // _app->unpause();
+    
+    _app->checkForLocalFile();
 }
 
 -(void)applicationDidReceiveMemoryWarning:(UIApplication *)application

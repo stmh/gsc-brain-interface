@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>gsc brain interface osx.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D450A1D01671F6FD003A6A02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D4D6A1FB166BABC7005BDE49</key>
 		<dict>
 			<key>primary</key>

@@ -16,7 +16,6 @@
 		D412F65E166F6C160094569C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D412F65D166F6C160094569C /* CoreMedia.framework */; };
 		D42A47E6166DF44C002855AA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E5166DF44C002855AA /* Accelerate.framework */; };
 		D42A47E8166DF454002855AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A47E7166DF454002855AA /* MobileCoreServices.framework */; };
-		D42A48DE166E2AC6002855AA /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D42A48DD166E2AC6002855AA /* arial.ttf */; };
 		D450A1D51671F6FD003A6A02 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D450A1D41671F6FD003A6A02 /* main.mm */; };
 		D450A1E21671F903003A6A02 /* OpenThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DB1671F903003A6A02 /* OpenThreads.framework */; };
 		D450A1E31671F903003A6A02 /* osg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DC1671F903003A6A02 /* osg.framework */; };
@@ -36,6 +35,7 @@
 		D450A1F71671FC7E003A6A02 /* osgdb_curld.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F61671FC7B003A6A02 /* osgdb_curld.so */; };
 		D450A1F91671FCE1003A6A02 /* osgdb_freetyped.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */; };
 		D450A1FB16721065003A6A02 /* osgdb_QTKitd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */; };
+		D45152A31673AE5300193443 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D45152A21673AE5300193443 /* arial.ttf */; };
 		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
@@ -91,7 +91,6 @@
 		D412F65D166F6C160094569C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D42A47E5166DF44C002855AA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D42A47E7166DF454002855AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		D42A48DD166E2AC6002855AA /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = "../../../Projekte/cefix/3rdParty/OpenSceneGraph-Data/fonts/arial.ttf"; sourceTree = "<group>"; };
 		D450A1D11671F6FD003A6A02 /* gsc brain interface osx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gsc brain interface osx"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D450A1D41671F6FD003A6A02 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		D450A1DB1671F903003A6A02 /* OpenThreads.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenThreads.framework; path = ../../../osg/build/lib/OpenThreads.framework; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		D450A1F61671FC7B003A6A02 /* osgdb_curld.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_curld.so; path = ../../../osg/build/lib/osgdb_curld.so; sourceTree = "<group>"; };
 		D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_freetyped.so; path = ../../../osg/build/lib/osgdb_freetyped.so; sourceTree = "<group>"; };
 		D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_QTKitd.so; path = ../../../osg/build/lib/osgdb_QTKitd.so; sourceTree = "<group>"; };
+		D45152A21673AE5300193443 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = assets/arial.ttf; sourceTree = SOURCE_ROOT; };
 		D4A2CFE016725F8100DFB201 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = "../../3rdParty-libs/include/TestFlight.h"; sourceTree = "<group>"; };
 		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -263,9 +263,9 @@
 		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D45152A21673AE5300193443 /* arial.ttf */,
 				D412F631166F55960094569C /* ipad-icon@2x.png */,
 				D412F62F166F558D0094569C /* ipad-icon.png */,
-				D42A48DD166E2AC6002855AA /* arial.ttf */,
 				D4D6A238166BB04C005BDE49 /* Default-Landscape@2x~ipad.png */,
 				D4D6A236166BB04A005BDE49 /* Default-Landscape~ipad.png */,
 				D4D6A234166BB047005BDE49 /* Default-Portrait~ipad.png */,
@@ -357,9 +357,9 @@
 				D4D6A235166BB047005BDE49 /* Default-Portrait~ipad.png in Resources */,
 				D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */,
 				D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */,
-				D42A48DE166E2AC6002855AA /* arial.ttf in Resources */,
 				D412F630166F558D0094569C /* ipad-icon.png in Resources */,
 				D412F632166F55960094569C /* ipad-icon@2x.png in Resources */,
+				D45152A31673AE5300193443 /* arial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
