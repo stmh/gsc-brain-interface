@@ -23,6 +23,22 @@
 #include "IdleTimerEventHandler.h"
 
 
+class IgnoreInputTrackballCameraManipulator : public osgGA::TrackballManipulator {
+public:
+    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa)
+    {
+        if ((ea.getEventType() == osgGA::GUIEventAdapter::PUSH)
+            || (ea.getEventType() == osgGA::GUIEventAdapter::DRAG)
+            || (ea.getEventType() == osgGA::GUIEventAdapter::RELEASE))
+            
+            return false;
+        
+        return osgGA::TrackballManipulator::handle(ea, aa);
+    }
+
+};
+
+
 class ScopedNotifyLevel {
 public:
     ScopedNotifyLevel(osg::NotifySeverity new_level, const std::string& message = "")
@@ -281,7 +297,7 @@ void IOSViewer::realize()
     osg::Group* group = new osg::Group();
     group->addChild(setupHud());
     
-    setCameraManipulator(new osgGA::TrackballManipulator());
+    setCameraManipulator(new IgnoreInputTrackballCameraManipulator());
     
     // seup event handler
     _zeroconfEventHandler = new ZeroConfDiscoverEventHandler();
@@ -314,6 +330,41 @@ void IOSViewer::realize()
     checkForLocalFile();
     
     osgViewer::Viewer::realize();
+}
+
+void IOSViewer::setSceneData(osg::Node *node)
+{
+    osgViewer::Viewer::setSceneData(node);
+    
+    /* does not work
+    osg::BoundingSphere bs = node->getBound();
+
+    double dist = osg::DisplaySettings::instance()->getScreenDistance();
+    
+    
+    double screenWidth = 0.2; //osg::DisplaySettings::instance()->getScreenWidth();
+    double screenHeight = 0.15; //osg::DisplaySettings::instance()->getScreenHeight();
+    double screenDistance = 0.3; //osg::DisplaySettings::instance()->getScreenDistance();
+
+    double vfov = atan2(screenHeight/2.0,screenDistance)*2.0;
+    double hfov = atan2(screenWidth/2.0,screenDistance)*2.0;
+    double viewAngle = vfov<hfov ? vfov : hfov;
+
+    dist = 10 * bs.radius();
+    
+
+
+    osg::Vec3 center = bs.center();
+    osg::Vec3 eye = center - osg::Vec3d(0.0, dist, 0.0);
+    osg::Vec3 up = osg::Vec3d(0.0, 0.0, 1.0);
+    
+    osg::Matrixd matrix;
+    matrix.makeLookAt(eye, center, up);
+
+    getCamera()->setViewMatrix( matrix );
+    getCamera()->setProjectionMatrixAsPerspective( viewAngle, screenWidth/screenHeight, 0.1, 1000.0);
+
+    */
 }
 
 

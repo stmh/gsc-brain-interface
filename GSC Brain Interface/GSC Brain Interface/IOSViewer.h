@@ -37,6 +37,8 @@ public:
     
     void showMaintenanceScene();
     
+    virtual void setSceneData(osg::Node* node);
+    
 protected:
     osg::Node* setupHud();
     void checkEnvVars();

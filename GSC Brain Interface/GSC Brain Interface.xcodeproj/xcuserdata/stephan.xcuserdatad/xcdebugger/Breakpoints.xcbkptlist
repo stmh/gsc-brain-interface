@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376769242.96185"
+         timestampString = "377112148.460815"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "234"
-         endingLineNumber = "234"
+         startingLineNumber = "250"
+         endingLineNumber = "250"
          landmarkName = "IOSViewer::setupHud()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376769242.96185"
+         timestampString = "377112148.460815"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "198"
-         endingLineNumber = "198"
+         startingLineNumber = "214"
+         endingLineNumber = "214"
          landmarkName = "IOSViewer::setupHud()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -160,15 +160,15 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376769242.96185"
+         timestampString = "377112148.460815"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "254"
-         endingLineNumber = "254"
+         startingLineNumber = "270"
+         endingLineNumber = "270"
          landmarkName = "IOSViewer::checkForLocalFile()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,50 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.cpp"
-         timestampString = "376769242.96185"
+         timestampString = "377112148.460815"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "182"
-         endingLineNumber = "182"
+         startingLineNumber = "198"
+         endingLineNumber = "198"
+         landmarkName = "IOSViewer::readScene(const std::string&amp; host, unsigned int port)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "377112148.460815"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "342"
+         endingLineNumber = "342"
+         landmarkName = "IOSViewer::setSceneData(osg::Node *node)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "377112148.460815"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "351"
+         endingLineNumber = "351"
+         landmarkName = "IOSViewer::setSceneData(osg::Node *node)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.cpp"
+         timestampString = "377112148.460815"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "186"
+         endingLineNumber = "186"
          landmarkName = "IOSViewer::readScene(const std::string&amp; host, unsigned int port)"
          landmarkType = "5">
       </FileBreakpoint>
