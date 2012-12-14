@@ -7,8 +7,6 @@
 -->
 <presentation>
 <env>OSG_STEREO=OFF</env>
-<env>P3D_DEVICE=10.0.1.16:9000.sender.osc</env>
-
 <holding_slide>
 <duration></duration>
 <background></background>

@@ -2,7 +2,8 @@
 
 <presentation>
 
-<env>P3D_DEVICE=0.0.0.0:9000.receiver.osc _p3d_osc._udp:9000.advertise.zeroconf 0.0.0.0:8000/Volumes/Daten/Work/gsc-brain-ios-interface/gsc_ipad.resthttp _p3d_http._tcp:8000.advertise.zeroconf</env>
+<env>P3D_DEVICE=0.0.0.0:9000.receiver.osc _p3d_osc._udp:9000.advertise.zeroconf 0.0.0.0:8000/Users/stephan/Documents/gsc-brain-ios-interface/gsc_ipad.resthttp _p3d_http._tcp:8000.advertise.zeroconf </env>
+
 
 
   <!-- idle page -->

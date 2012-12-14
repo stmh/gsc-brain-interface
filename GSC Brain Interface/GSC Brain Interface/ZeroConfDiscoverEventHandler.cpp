@@ -69,13 +69,16 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     std::ostringstream ss;
     ss << host << ":" << port << ".sender.osc";
     
+    if (_discoveredDevice.valid())
+        removeDevice(_discoveredDevice.get());
+    
     _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str());
     if (!_discoveredDevice.valid())
     {
         viewer->setStatusText("could not get osc-device: " + ss.str());
-        addDevice(_discoveredDevice.get());
     }
     else {
         std::cout << "sending events to " << ss.str() << std::endl;
+        addDevice(_discoveredDevice.get());
     }
 }
