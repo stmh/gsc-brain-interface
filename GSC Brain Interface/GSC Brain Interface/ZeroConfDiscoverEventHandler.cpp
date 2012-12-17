@@ -16,10 +16,7 @@
 
 bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
 {
-    for(DeviceList::iterator i = _devices.begin(); i != _devices.end(); ++i)
-    {
-        (*i)->sendEvent(ea);
-    }
+    forwardEvent(ea);
     
     if (ea.getEventType() == osgGA::GUIEventAdapter::USER)
     {
@@ -80,5 +77,35 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     else {
         std::cout << "sending events to " << ss.str() << std::endl;
         addDevice(_discoveredDevice.get());
+    }
+    sendInit();
+}
+
+void ZeroConfDiscoverEventHandler::forwardEvent(const osgGA::GUIEventAdapter &ea)
+{
+    for(DeviceList::iterator i = _devices.begin(); i != _devices.end(); ++i)
+    {
+        (*i)->sendEvent(ea);
+    }
+}
+
+void ZeroConfDiscoverEventHandler::sendInit()
+{
+    // send an resize event
+    {
+        osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
+        ea->setEventType(osgGA::GUIEventAdapter::RESIZE);
+        ea->setWindowRectangle(0, 0, 1024, 768);
+        forwardEvent(*ea.get());
+    }
+    // send a keypress + -release of the space-bar
+    {
+        osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
+        ea->setEventType(osgGA::GUIEventAdapter::KEYUP);
+        ea->setKey(' ');
+        forwardEvent(*ea.get());
+        ea->setEventType(osgGA::GUIEventAdapter::KEYDOWN);
+        ea->setKey(' ');
+        forwardEvent(*ea.get());
     }
 }

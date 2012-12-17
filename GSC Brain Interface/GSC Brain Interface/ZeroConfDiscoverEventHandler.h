@@ -39,7 +39,11 @@ public:
     
     void removeAllDevices() { _devices.clear(); }
     
+    void sendInit();
+    
 private:
+    void forwardEvent(const osgGA::GUIEventAdapter& ea);
+    
     osg::ref_ptr<osgGA::Device> _discoveredDevice;
     DeviceList _devices;
 };

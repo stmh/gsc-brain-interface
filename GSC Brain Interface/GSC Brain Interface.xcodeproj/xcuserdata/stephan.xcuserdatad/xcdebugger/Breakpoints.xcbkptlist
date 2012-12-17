@@ -238,16 +238,68 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
+         timestampString = "377430960.296351"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
+         landmarkName = "ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const std::string&amp; host, unsigned int port)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IdleTimerEventHandler.cpp"
+         timestampString = "377430960.296351"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "27"
+         endingLineNumber = "27"
+         landmarkName = "IdleTimerEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
+         timestampString = "377431109.000533"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
+         landmarkName = "ZeroConfDiscoverEventHandler::sendInit()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/osc/OscSendingDevice.cpp"
+         timestampString = "377431386.386498"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
+         landmarkName = "OscSendingDevice::sendInit(const osgGA::GUIEventAdapter &amp;ea)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
-         timestampString = "377195634.341221"
+         timestampString = "377431600.053735"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "69"
-         endingLineNumber = "69"
-         landmarkName = "ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const std::string&amp; host, unsigned int port)"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
+         landmarkName = "ZeroConfDiscoverEventHandler::sendInit()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

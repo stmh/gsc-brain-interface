@@ -24,6 +24,8 @@ bool IdleTimerEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIA
         {
             OSG_ALWAYS << "resetting scene ... idle timeout" << std::endl;
             
+            view->getEventQueue()->windowResize(ea.getWindowX(), ea.getWindowY(), ea.getWindowWidth(), ea.getWindowHeight());
+            
             view->getEventQueue()->keyPress(osgGA::GUIEventAdapter::KEY_Home);
             view->getEventQueue()->keyRelease(osgGA::GUIEventAdapter::KEY_Home);
             

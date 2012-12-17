@@ -39,6 +39,8 @@ public:
     
     virtual void setSceneData(osg::Node* node);
     
+    void wakeUp();
+    
 protected:
     osg::Node* setupHud();
     void checkEnvVars();

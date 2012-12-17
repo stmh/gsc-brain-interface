@@ -373,6 +373,12 @@ void IOSViewer::cleanup()
 
 }
 
+void IOSViewer::wakeUp()
+{
+    checkForLocalFile();
+    _zeroconfEventHandler->sendInit();
+}
+
 
 void IOSViewer::handleMemoryWarning()
 {
