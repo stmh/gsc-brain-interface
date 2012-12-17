@@ -16,15 +16,7 @@
 
 class IOSViewer : public osgViewer::Viewer {
 public:
-    IOSViewer()
-        : osgViewer::Viewer()
-        , _maintenanceScene(NULL)
-        , _statusText(NULL)
-        , _maintenanceMovie(NULL)
-        , _sceneLoaded(false)
-        , _isLocalScene(false)
-    {
-    }
+    IOSViewer();
     void addDataFolder(const std::string& folder);
     void realize();
     void cleanup();

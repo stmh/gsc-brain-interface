@@ -102,12 +102,21 @@ osg::ref_ptr<osg::Node> readPresentation(const std::string& filename,const osgDB
     return osgDB::readRefNodeFile(filename, local_options.get());
 }
 
-
+IOSViewer::IOSViewer()
+    : osgViewer::Viewer()
+    , _maintenanceScene(NULL)
+    , _statusText(NULL)
+    , _maintenanceMovie(NULL)
+    , _sceneLoaded(false)
+    , _isLocalScene(false)
+{
+    osg::setNotifyLevel(osg::NOTICE);
+}
 
 void IOSViewer::addDataFolder(const std::string& folder)
 {
     osgDB::Registry::instance()->getDataFilePathList().push_front(folder);
-    OSG_NOTICE << "add data folder: " << folder << std::endl;
+    OSG_INFO << "add data folder: " << folder << std::endl;
 }
 
 
