@@ -24,27 +24,47 @@
 #ifdef TESTING
 #include "TestFlight.h"
 
+static const double MAX_IDLE_TIME = 3*60.0;
+static const char* INTERFACE_FILE_NAME = "interface.p3d";
+
 class TestflightNotifyHandler : public osg::NotifyHandler {
 public:
     virtual void notify (osg::NotifySeverity severity, const char *message)
     {
-        TFLog(@"%s: %s", getSeverity(severity), message);
+        std::string msg(message);
+        msg = msg.substr(0,msg.length()-1);
+        _lastMessages.push_back(msg);
+        if(_lastMessages.size() > 20)
+            _lastMessages.pop_front();
+    
+        TFLog(@"%s: %s", getSeverity(severity), msg.c_str());
     }
     
     const char* getSeverity(osg::NotifySeverity severity) {
     
         switch(severity) {
-            case osg::ALWAYS:           return "[ALWAYS]     ";
-            case osg::FATAL:            return "[FATAL]      ";
-            case osg::WARN:             return "[WARN]       ";
-            case osg::NOTICE:           return "[NOTICE]     ";
-            case osg::INFO:             return "[INFO]       ";
+            case osg::ALWAYS:           return "[ALWAYS] ";
+            case osg::FATAL:            return "[FATAL] ";
+            case osg::WARN:             return "[WARN] ";
+            case osg::NOTICE:           return "[NOTICE] ";
+            case osg::INFO:             return "[INFO] ";
             case osg::DEBUG_INFO:       return "[DEBUG_INFO] ";
-            case osg::DEBUG_FP:         return "[DEBUG_FP]   ";
+            case osg::DEBUG_FP:         return "[DEBUG_FP] ";
         }
         return "";
     }
-
+    
+    std::string getLastMessages()
+    {
+        std::string result;
+        for(std::deque<std::string>::iterator i = _lastMessages.begin(); i != _lastMessages.end(); ++i)
+            result += (*i) + '\n';
+        
+        return result;
+    }
+    
+private:
+    std::deque<std::string> _lastMessages;
 };
 
 #endif
@@ -62,6 +82,79 @@ public:
         return osgGA::TrackballManipulator::handle(ea, aa);
     }
 
+};
+
+class DebugConsoleEventHandler : public osgGA::GUIEventHandler {
+
+public:
+    DebugConsoleEventHandler(TestflightNotifyHandler* nh)
+        : osgGA::GUIEventHandler()
+        , _nh(nh)
+        , _visible(false)
+    {
+        osg::Camera* hudCamera = new osg::Camera;
+        hudCamera->setReferenceFrame(osg::Transform::ABSOLUTE_RF);
+        hudCamera->setProjectionMatrixAsOrtho2D(0,2*1024,0,2*768);
+        hudCamera->setViewMatrix(osg::Matrix::identity());
+        hudCamera->setRenderOrder(osg::Camera::POST_RENDER);
+        hudCamera->setClearMask(GL_DEPTH_BUFFER_BIT);
+        
+         osg::Geode* geode = new osg::Geode();
+        hudCamera->addChild(geode);
+
+        _tg = new osgText::Text();
+        _tg->setDataVariance(osg::Object::DYNAMIC);
+        _tg->setFont("arial.ttf");
+        _tg->setPosition(osg::Vec3(20,2*768 - 20,0));
+        _tg->setColor(osg::Vec4(1,1,1,1));
+        _tg->setText("");
+        _tg->setCharacterSize(24.0f);
+        _tg->setAxisAlignment(osgText::TextBase::XY_PLANE);
+        _tg->getOrCreateStateSet()->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
+        _tg->getOrCreateStateSet()->setMode(GL_DEPTH_TEST, osg::StateAttribute::OFF);
+        
+        geode->addDrawable(_tg);
+        
+        _camera = hudCamera;
+    }
+    
+    virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa)
+    {
+        if ((ea.getEventType() == osgGA::GUIEventAdapter::RELEASE) && ea.isMultiTouchEvent())
+        {
+            const osgGA::GUIEventAdapter::TouchData* td = ea.getTouchData();
+            if ((td->getNumTouchPoints() == 1) && (td->get(0).tapCount == 3))
+            {
+                _visible = !_visible;
+                osgViewer::Viewer* viewer = dynamic_cast<osgViewer::Viewer*>(&aa);
+                if (viewer) {
+                    osg::Group* group = dynamic_cast<osg::Group*>(viewer->getSceneData());
+                    if (!group) {
+                        group = new osg::Group();
+                        group->addChild(viewer->getSceneData());
+                        viewer->setSceneData(group);
+                    }
+                    if (_visible)
+                        group->addChild(_camera);
+                    else
+                        group->removeChild(_camera);
+                }
+                _tg->setText(_nh->getLastMessages());
+            }
+        }
+        else if ((ea.getEventType() == osgGA::GUIEventAdapter::FRAME) && _visible)
+        {
+            _tg->setText(_nh->getLastMessages());
+        }
+        return false;
+    }
+    
+private:
+    osg::ref_ptr<TestflightNotifyHandler> _nh;
+    osg::ref_ptr<osg::Camera> _camera;
+    osg::ref_ptr<osgText::Text> _tg;
+    bool _visible;
+    
 };
 
 
@@ -86,9 +179,6 @@ private:
     std::string _message;
 };
 
-
-static const double MAX_IDLE_TIME = 3*60.0;
-static const char* INTERFACE_FILE_NAME = "interface.p3d";
 
 osgDB::Options* createOptions(const osgDB::ReaderWriter::Options* options)
 {
@@ -137,8 +227,11 @@ IOSViewer::IOSViewer()
     , _isLocalScene(false)
 {
     osg::setNotifyLevel(osg::NOTICE);
-    #ifdef TESTNG
-        osg::setNotifyHandler(new TestflightNotifyHandler());
+    #ifdef TESTING
+        TestflightNotifyHandler* nh =new TestflightNotifyHandler();
+        osg::setNotifyHandler(nh);
+    
+        addEventHandler(new DebugConsoleEventHandler(nh));
     #endif
 }
 
@@ -341,7 +434,7 @@ void IOSViewer::realize()
     _zeroconfEventHandler = new ZeroConfDiscoverEventHandler();
     addEventHandler(new IdleTimerEventHandler(MAX_IDLE_TIME));
     addEventHandler(_zeroconfEventHandler);
-    
+
     
     // setup zeroconf
     std::vector<std::string> service_types;

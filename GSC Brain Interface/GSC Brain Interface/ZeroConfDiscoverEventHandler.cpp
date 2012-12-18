@@ -91,6 +91,8 @@ void ZeroConfDiscoverEventHandler::forwardEvent(const osgGA::GUIEventAdapter &ea
 
 void ZeroConfDiscoverEventHandler::sendInit()
 {
+    OSG_NOTICE << "ZeroConfDiscoverEventHandler::sendInit" << std::endl;
+    
     // send an resize event
     {
         osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
