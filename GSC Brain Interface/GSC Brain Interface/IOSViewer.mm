@@ -21,7 +21,33 @@
 #include <stdlib.h>
 #include "ZeroConfDiscoverEventHandler.h"
 #include "IdleTimerEventHandler.h"
+#ifdef TESTING
+#include "TestFlight.h"
 
+class TestflightNotifyHandler : public osg::NotifyHandler {
+public:
+    virtual void notify (osg::NotifySeverity severity, const char *message)
+    {
+        TFLog(@"%s: %s", getSeverity(severity), message);
+    }
+    
+    const char* getSeverity(osg::NotifySeverity severity) {
+    
+        switch(severity) {
+            case osg::ALWAYS:           return "[ALWAYS]     ";
+            case osg::FATAL:            return "[FATAL]      ";
+            case osg::WARN:             return "[WARN]       ";
+            case osg::NOTICE:           return "[NOTICE]     ";
+            case osg::INFO:             return "[INFO]       ";
+            case osg::DEBUG_INFO:       return "[DEBUG_INFO] ";
+            case osg::DEBUG_FP:         return "[DEBUG_FP]   ";
+        }
+        return "";
+    }
+
+};
+
+#endif
 
 class IgnoreInputTrackballCameraManipulator : public osgGA::TrackballManipulator {
 public:
@@ -111,6 +137,9 @@ IOSViewer::IOSViewer()
     , _isLocalScene(false)
 {
     osg::setNotifyLevel(osg::NOTICE);
+    #ifdef TESTNG
+        osg::setNotifyHandler(new TestflightNotifyHandler());
+    #endif
 }
 
 void IOSViewer::addDataFolder(const std::string& folder)
@@ -128,7 +157,7 @@ void IOSViewer::setStatusText(const std::string& status)
 
 
 void IOSViewer::showMaintenanceScene() {
-    setStatusText("waiting for http-server/interface-file");
+    setStatusText("waiting for http-server/interface-file ...");
     setSceneData(_maintenanceScene);
     getEventQueue()->keyPress(' ');
     getEventQueue()->keyRelease(' ');

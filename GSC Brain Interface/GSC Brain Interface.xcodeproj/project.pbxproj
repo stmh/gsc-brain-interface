@@ -24,7 +24,7 @@
 		D450A1E61671F903003A6A02 /* osgText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1DF1671F903003A6A02 /* osgText.framework */; };
 		D450A1E71671F903003A6A02 /* osgUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1E01671F903003A6A02 /* osgUtil.framework */; };
 		D450A1E81671F903003A6A02 /* osgViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D450A1E11671F903003A6A02 /* osgViewer.framework */; };
-		D450A1E91671F94E003A6A02 /* IOSViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */; };
+		D450A1E91671F94E003A6A02 /* IOSViewer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.mm */; };
 		D450A1EA1671F962003A6A02 /* ZeroConfDiscoverEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F628166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp */; };
 		D450A1EB1671F962003A6A02 /* IdleTimerEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D412F62C166F3FF60094569C /* IdleTimerEventHandler.cpp */; };
 		D450A1F11671FC0A003A6A02 /* osgdb_imageiod.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1EC1671FBE8003A6A02 /* osgdb_imageiod.so */; };
@@ -44,7 +44,7 @@
 		D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A214166BABC7005BDE49 /* Default@2x.png */; };
 		D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */; };
 		D4D6A223166BAC05005BDE49 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */; };
-		D4D6A224166BAC05005BDE49 /* IOSViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */; };
+		D4D6A224166BAC05005BDE49 /* IOSViewer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A21F166BAC05005BDE49 /* IOSViewer.mm */; };
 		D4D6A225166BAC05005BDE49 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4D6A221166BAC05005BDE49 /* main.mm */; };
 		D4D6A227166BAD64005BDE49 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A226166BAD64005BDE49 /* OpenGLES.framework */; };
 		D4D6A229166BAD6B005BDE49 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A228166BAD6B005BDE49 /* libz.dylib */; };
@@ -122,7 +122,7 @@
 		D4D6A216166BABC7005BDE49 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D4D6A21D166BAC05005BDE49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSViewer.cpp; sourceTree = "<group>"; };
+		D4D6A21F166BAC05005BDE49 /* IOSViewer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IOSViewer.mm; sourceTree = "<group>"; };
 		D4D6A220166BAC05005BDE49 /* IOSViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSViewer.h; sourceTree = "<group>"; };
 		D4D6A221166BAC05005BDE49 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		D4D6A222166BAC05005BDE49 /* osgPlugins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osgPlugins.h; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 				D4D6A21D166BAC05005BDE49 /* AppDelegate.h */,
 				D4A2CFE016725F8100DFB201 /* TestFlight.h */,
 				D4D6A21E166BAC05005BDE49 /* AppDelegate.mm */,
-				D4D6A21F166BAC05005BDE49 /* IOSViewer.cpp */,
+				D4D6A21F166BAC05005BDE49 /* IOSViewer.mm */,
 				D4D6A220166BAC05005BDE49 /* IOSViewer.h */,
 				D4D6A221166BAC05005BDE49 /* main.mm */,
 				D4D6A222166BAC05005BDE49 /* osgPlugins.h */,
@@ -372,7 +372,7 @@
 			files = (
 				D450A1EA1671F962003A6A02 /* ZeroConfDiscoverEventHandler.cpp in Sources */,
 				D450A1EB1671F962003A6A02 /* IdleTimerEventHandler.cpp in Sources */,
-				D450A1E91671F94E003A6A02 /* IOSViewer.cpp in Sources */,
+				D450A1E91671F94E003A6A02 /* IOSViewer.mm in Sources */,
 				D450A1D51671F6FD003A6A02 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6A223166BAC05005BDE49 /* AppDelegate.mm in Sources */,
-				D4D6A224166BAC05005BDE49 /* IOSViewer.cpp in Sources */,
+				D4D6A224166BAC05005BDE49 /* IOSViewer.mm in Sources */,
 				D4D6A225166BAC05005BDE49 /* main.mm in Sources */,
 				D412F62A166F3F2B0094569C /* ZeroConfDiscoverEventHandler.cpp in Sources */,
 				D412F62E166F3FF60094569C /* IdleTimerEventHandler.cpp in Sources */,

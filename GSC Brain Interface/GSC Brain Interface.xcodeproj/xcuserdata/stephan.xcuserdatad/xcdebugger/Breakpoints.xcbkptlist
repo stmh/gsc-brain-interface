@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/AppDelegate.mm"
-         timestampString = "376406187.560997"
+         timestampString = "377513655.144953"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-removeDisplayLink"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/AppDelegate.mm"
-         timestampString = "376406187.560997"
+         timestampString = "377513655.144953"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
          landmarkName = "-updateScene"
          landmarkType = "5">
       </FileBreakpoint>
@@ -300,6 +300,71 @@
          startingLineNumber = "99"
          endingLineNumber = "99"
          landmarkName = "ZeroConfDiscoverEventHandler::sendInit()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "377513732.649476"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "notify (osg::NotifySeverity severity, const char *message)"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "377513874.369067"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
+         landmarkName = "IOSViewer::IOSViewer()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "377513795.721134"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
+         landmarkName = "IOSViewer::IOSViewer()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "377513796.993342"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
+         landmarkName = "IOSViewer::IOSViewer()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "377513899.659757"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
+         landmarkName = "IOSViewer::setStatusText(const std::string&amp; status)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

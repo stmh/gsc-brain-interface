@@ -14,6 +14,8 @@
 #include <osg/ImageStream>
 #include "ZeroConfDiscoverEventHandler.h"
 
+#define TESTING 1
+
 class IOSViewer : public osgViewer::Viewer {
 public:
     IOSViewer();

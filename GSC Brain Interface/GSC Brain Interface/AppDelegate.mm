@@ -1,8 +1,9 @@
 //Created by Thomas Hogarth 2009
 
 #import "AppDelegate.h"
-#import "Testflight.h"
-#define TESTING
+#ifdef TESTING
+    #import "Testflight.h"
+#endif
 
 
 @implementation AppDelegate
@@ -17,6 +18,7 @@
     
 	[TestFlight takeOff:@"8d28e8c9dd4f4488134a230b2f66c940_MTYwODIxMjAxMi0xMi0wNyAxMjozMjoxNy40MDM5ODU"];
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    
 #endif
     
     NSString* doc_folder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
