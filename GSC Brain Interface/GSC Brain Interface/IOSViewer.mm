@@ -34,7 +34,7 @@ public:
         std::string msg(message);
         msg = msg.substr(0,msg.length()-1);
         _lastMessages.push_back(msg);
-        if(_lastMessages.size() > 20)
+        if(_lastMessages.size() > 60)
             _lastMessages.pop_front();
     
         TFLog(@"%s: %s", getSeverity(severity), msg.c_str());
@@ -274,7 +274,7 @@ void IOSViewer::checkEnvVars()
             osg::ref_ptr<osgGA::Device> dev = osgDB::readFile<osgGA::Device>(*i);
             if (dev.valid())
             {
-                OSG_INFO << "Adding Device : " << *i << std::endl;
+                OSG_NOTICE << "Adding Device : " << *i << std::endl;
                 if (dev->getCapabilities() & osgGA::Device::RECEIVE_EVENTS)
                     addDevice(dev.get());
                 
