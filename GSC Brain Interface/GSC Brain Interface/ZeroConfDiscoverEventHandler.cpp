@@ -97,7 +97,7 @@ void ZeroConfDiscoverEventHandler::sendInit()
     {
         osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
         ea->setEventType(osgGA::GUIEventAdapter::RESIZE);
-        ea->setWindowRectangle(0, 0, 1024, 768);
+        ea->setWindowRectangle(0, 0, 2*1024, 2*768);
         forwardEvent(*ea.get());
     }
     // send a keypress + -release of the space-bar

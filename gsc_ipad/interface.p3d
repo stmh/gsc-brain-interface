@@ -7,6 +7,7 @@
 -->
 <presentation>
 <env>OSG_STEREO=OFF</env>
+<env>P3D_DEVICE=shiny.local:9000.sender.osc</env>
 <holding_slide>
 <duration></duration>
 <background></background>
