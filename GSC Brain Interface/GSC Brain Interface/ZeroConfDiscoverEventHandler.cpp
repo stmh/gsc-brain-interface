@@ -16,15 +16,25 @@
 
 bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv)
 {
-    forwardEvent(ea);
+    IOSViewer* viewer = dynamic_cast<IOSViewer*>(&aa);
+    if (!viewer)
+        return false;
+    
+    // forward all key + user-events to devices
+    if ((ea.getEventType() == osgGA::GUIEventAdapter::KEYDOWN) ||
+        (ea.getEventType() == osgGA::GUIEventAdapter::KEYUP) ||
+        (ea.getEventType() == osgGA::GUIEventAdapter::USER))
+    {
+        for(osgViewer::View::Devices::iterator i = viewer->getDevices().begin(); i != viewer->getDevices().end(); ++i)
+        {
+            if ((*i)->getCapabilities() & osgGA::Device::SEND_EVENTS)
+                (*i)->sendEvent(ea);
+        }
+    }
     
     if (ea.getEventType() == osgGA::GUIEventAdapter::USER)
     {
-        IOSViewer* viewer = dynamic_cast<IOSViewer*>(&aa);
-        if (!viewer)
-            return false;
-        
-        std::cout << "user-event: " << ea.getName() << std::endl;
+        // std::cout << "user-event: " << ea.getName() << std::endl;
         
         if (ea.getName() == "/zeroconf/service-added")
         {
@@ -53,7 +63,7 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
                 viewer->showMaintenanceScene();
             else if(type == oscServiceType())
             {
-                removeDevice(_discoveredDevice);
+                viewer->removeDevice(_discoveredDevice);
                 _discoveredDevice = NULL;
             }
         }
@@ -67,7 +77,9 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     ss << host << ":" << port << ".sender.osc";
     
     if (_discoveredDevice.valid())
-        removeDevice(_discoveredDevice.get());
+    {
+        viewer->removeDevice(_discoveredDevice.get());
+    }
     
     _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str());
     if (!_discoveredDevice.valid())
@@ -76,38 +88,8 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     }
     else {
         std::cout << "sending events to " << ss.str() << std::endl;
-        addDevice(_discoveredDevice.get());
+        viewer->addDevice(_discoveredDevice.get());
     }
-    sendInit();
+    viewer->sendInit();
 }
 
-void ZeroConfDiscoverEventHandler::forwardEvent(const osgGA::GUIEventAdapter &ea)
-{
-    for(DeviceList::iterator i = _devices.begin(); i != _devices.end(); ++i)
-    {
-        (*i)->sendEvent(ea);
-    }
-}
-
-void ZeroConfDiscoverEventHandler::sendInit()
-{
-    OSG_NOTICE << "ZeroConfDiscoverEventHandler::sendInit" << std::endl;
-    
-    // send an resize event
-    {
-        osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
-        ea->setEventType(osgGA::GUIEventAdapter::RESIZE);
-        ea->setWindowRectangle(0, 0, 2*1024, 2*768);
-        forwardEvent(*ea.get());
-    }
-    // send a keypress + -release of the space-bar
-    {
-        osg::ref_ptr<osgGA::GUIEventAdapter> ea = new osgGA::GUIEventAdapter();
-        ea->setEventType(osgGA::GUIEventAdapter::KEYUP);
-        ea->setKey(' ');
-        forwardEvent(*ea.get());
-        ea->setEventType(osgGA::GUIEventAdapter::KEYDOWN);
-        ea->setKey(' ');
-        forwardEvent(*ea.get());
-    }
-}

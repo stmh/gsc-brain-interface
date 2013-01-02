@@ -21,23 +21,33 @@
 #include <stdlib.h>
 #include "ZeroConfDiscoverEventHandler.h"
 #include "IdleTimerEventHandler.h"
-#ifdef TESTING
-#include "TestFlight.h"
+
+#if TESTING
+    #include "TestFlight.h"
+#endif
 
 static const double MAX_IDLE_TIME = 3*60.0;
 static const char* INTERFACE_FILE_NAME = "interface.p3d";
+
+
 
 class TestflightNotifyHandler : public osg::NotifyHandler {
 public:
     virtual void notify (osg::NotifySeverity severity, const char *message)
     {
+        OpenThreads::ScopedLock<OpenThreads::Mutex> lock(_mutex);
+        
         std::string msg(message);
         msg = msg.substr(0,msg.length()-1);
         _lastMessages.push_back(msg);
         if(_lastMessages.size() > 60)
             _lastMessages.pop_front();
     
-        TFLog(@"%s: %s", getSeverity(severity), msg.c_str());
+        #if TESTING
+            TFLog(@"%s: %s", getSeverity(severity), msg.c_str());
+        #else
+            std::cout << getSeverity(severity) << msg << std::endl;
+        #endif
     }
     
     const char* getSeverity(osg::NotifySeverity severity) {
@@ -65,9 +75,10 @@ public:
     
 private:
     std::deque<std::string> _lastMessages;
+    OpenThreads::Mutex _mutex;
 };
 
-#endif
+
 
 class IgnoreInputTrackballCameraManipulator : public osgGA::TrackballManipulator {
 public:
@@ -226,13 +237,12 @@ IOSViewer::IOSViewer()
     , _sceneLoaded(false)
     , _isLocalScene(false)
 {
-    osg::setNotifyLevel(osg::NOTICE);
-    #ifdef TESTING
-        TestflightNotifyHandler* nh =new TestflightNotifyHandler();
-        osg::setNotifyHandler(nh);
+    osg::setNotifyLevel(osg::INFO);
     
-        addEventHandler(new DebugConsoleEventHandler(nh));
-    #endif
+    TestflightNotifyHandler* nh =new TestflightNotifyHandler();
+    osg::setNotifyHandler(nh);
+    
+    addEventHandler(new DebugConsoleEventHandler(nh));
 }
 
 void IOSViewer::addDataFolder(const std::string& folder)
@@ -268,26 +278,13 @@ void IOSViewer::checkEnvVars()
     {
         osgDB::StringList devices;
         osgDB::split(p3dDevice, devices);
-        bool first(true);
         for(osgDB::StringList::iterator i = devices.begin(); i != devices.end(); ++i)
         {
             osg::ref_ptr<osgGA::Device> dev = osgDB::readFile<osgGA::Device>(*i);
             if (dev.valid())
             {
                 OSG_NOTICE << "Adding Device : " << *i << std::endl;
-                if (dev->getCapabilities() & osgGA::Device::RECEIVE_EVENTS)
-                    addDevice(dev.get());
-                
-                if (dev->getCapabilities() & osgGA::Device::SEND_EVENTS)
-                {
-                    if (first)
-                    {
-                        _zeroconfEventHandler->removeAllDevices();
-                        first = false;
-                    }
-                    _zeroconfEventHandler->addDevice(dev);
-                }
-                    
+                addDevice(dev.get());
             }
             else
             {
@@ -507,9 +504,17 @@ void IOSViewer::cleanup()
 void IOSViewer::wakeUp()
 {
     checkForLocalFile();
-    _zeroconfEventHandler->sendInit();
+    sendInit();
 }
 
+void IOSViewer::sendInit()
+{
+    // send a keypress + -release of the space-bar
+    {
+        getEventQueue()->keyPress(' ');
+        getEventQueue()->keyRelease(' ');
+    }
+}
 
 void IOSViewer::handleMemoryWarning()
 {

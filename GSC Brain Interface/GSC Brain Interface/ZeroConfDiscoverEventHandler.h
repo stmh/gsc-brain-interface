@@ -15,35 +15,17 @@
 class IOSViewer;
 
 class ZeroConfDiscoverEventHandler : public osgGA::GUIEventHandler {
-public:
-    typedef std::vector<osg::ref_ptr< osgGA::Device > > DeviceList;
-    
+public:    
     ZeroConfDiscoverEventHandler() : osgGA::GUIEventHandler() {}
+    
     virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv);
     
     void startEventForwarding(IOSViewer* viewer, const std::string& host, unsigned int port);
     
     static const char* httpServiceType() { return "_p3d_http._tcp"; }
     static const char* oscServiceType() { return "_p3d_osc._udp"; }
-    void addDevice(osgGA::Device* device)
-    {
-        _devices.push_back(device);
-    }
-    
-    void removeDevice(osgGA::Device* device)
-    {
-        DeviceList::iterator itr = std::find(_devices.begin(), _devices.end(), device);
-        if (itr != _devices.end())
-            _devices.erase(itr);
-    }
-    
-    void removeAllDevices() { _devices.clear(); }
-    
-    void sendInit();
-    
+            
 private:
-    void forwardEvent(const osgGA::GUIEventAdapter& ea);
     
     osg::ref_ptr<osgGA::Device> _discoveredDevice;
-    DeviceList _devices;
 };

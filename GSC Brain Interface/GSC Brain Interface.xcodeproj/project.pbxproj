@@ -289,6 +289,7 @@
 			buildPhases = (
 				D450A1CD1671F6FD003A6A02 /* Sources */,
 				D450A1CE1671F6FD003A6A02 /* Frameworks */,
+				D4BC99A2169452B800E75AC7 /* ShellScript */,
 				D450A1CF1671F6FD003A6A02 /* CopyFiles */,
 			);
 			buildRules = (
@@ -364,6 +365,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4BC99A2169452B800E75AC7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${PROJECT_DIR}\"\ncd ../../osg/build\n/usr/bin/xcodebuild -target osgdb_freetype -target osgdb_osc -target osgdb_QTKit -target osgdb_imageio -target osgdb_p3d -target osgdb_resthttp -target osgdb_zeroconf -target osgdb_curl -target application_present3D\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D450A1CD1671F6FD003A6A02 /* Sources */ = {
@@ -538,7 +556,7 @@
 					"-losgdb_deprecated_osgd",
 					"-lcurl",
 					"-lOpenThreadsd",
-					"-losgdb_p3d",
+					"-losgdb_p3dd",
 					"-losgPresentationd",
 					"-losgVolumed",
 					"-losgFXd",

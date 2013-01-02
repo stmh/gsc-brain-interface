@@ -1,7 +1,7 @@
 //Created by Thomas Hogarth 2009
 
 #import "AppDelegate.h"
-#ifdef TESTING
+#if TESTING
     #import "Testflight.h"
 #endif
 
@@ -14,12 +14,12 @@
 //
 - (void)applicationDidFinishLaunching:(UIApplication *)application 
 {
-    #ifdef TESTING
+    #if TESTING
     
-	[TestFlight takeOff:@"8d28e8c9dd4f4488134a230b2f66c940_MTYwODIxMjAxMi0xMi0wNyAxMjozMjoxNy40MDM5ODU"];
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+        [TestFlight takeOff:@"8d28e8c9dd4f4488134a230b2f66c940_MTYwODIxMjAxMi0xMi0wNyAxMjozMjoxNy40MDM5ODU"];
+        [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     
-#endif
+    #endif
     
     NSString* doc_folder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     

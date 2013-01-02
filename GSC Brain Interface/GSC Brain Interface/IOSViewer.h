@@ -14,7 +14,11 @@
 #include <osg/ImageStream>
 #include "ZeroConfDiscoverEventHandler.h"
 
-#define TESTING 1
+#include "TargetConditionals.h"
+
+#if TARGET_OS_IPHONE
+#define XTESTING 1
+#endif 
 
 class IOSViewer : public osgViewer::Viewer {
 public:
@@ -34,6 +38,7 @@ public:
     virtual void setSceneData(osg::Node* node);
     
     void wakeUp();
+    void sendInit();
     
 protected:
     osg::Node* setupHud();
