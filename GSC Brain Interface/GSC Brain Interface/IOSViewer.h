@@ -17,7 +17,7 @@
 #include "TargetConditionals.h"
 
 #if TARGET_OS_IPHONE
-#define XTESTING 1
+#define TESTING 1
 #endif 
 
 class IOSViewer : public osgViewer::Viewer {
