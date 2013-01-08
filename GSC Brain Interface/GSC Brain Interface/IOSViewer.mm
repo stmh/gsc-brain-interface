@@ -237,7 +237,7 @@ IOSViewer::IOSViewer()
     , _sceneLoaded(false)
     , _isLocalScene(false)
 {
-    osg::setNotifyLevel(osg::INFO);
+    osg::setNotifyLevel(osg::WARN);
     
     TestflightNotifyHandler* nh =new TestflightNotifyHandler();
     osg::setNotifyHandler(nh);
@@ -273,23 +273,68 @@ void IOSViewer::showMaintenanceScene() {
 
 void IOSViewer::checkEnvVars()
 {
-    const char* p3dDevice = getenv("P3D_DEVICE");
-    if (p3dDevice)
+    
     {
-        osgDB::StringList devices;
-        osgDB::split(p3dDevice, devices);
-        for(osgDB::StringList::iterator i = devices.begin(); i != devices.end(); ++i)
+        const char* p3dDevice = getenv("P3D_DEVICE");
+        if (p3dDevice)
         {
-            osg::ref_ptr<osgGA::Device> dev = osgDB::readFile<osgGA::Device>(*i);
-            if (dev.valid())
+            osgDB::StringList devices;
+            osgDB::split(p3dDevice, devices);
+            for(osgDB::StringList::iterator i = devices.begin(); i != devices.end(); ++i)
             {
-                OSG_NOTICE << "Adding Device : " << *i << std::endl;
-                addDevice(dev.get());
+                osg::ref_ptr<osgGA::Device> dev = osgDB::readFile<osgGA::Device>(*i);
+                if (dev.valid())
+                {
+                    OSG_NOTICE << "Adding Device : " << *i << std::endl;
+                    addDevice(dev.get());
+                }
+                else
+                {
+                    OSG_WARN << "could not open device: " << *i << std::endl;
+                }
             }
-            else
+        }
+    }
+    {
+        const char* p3dTimeOut = getenv("P3D_TIMEOUT");
+        if(p3dTimeOut)
+        {
+            unsigned int new_max_idle_time = atoi(p3dTimeOut);
+            if (new_max_idle_time > 0)
             {
-                OSG_WARN << "could not open device: " << *i << std::endl;
+                _idleTimerEventHandler->setNewMaxIdleTime(new_max_idle_time);
             }
+        }
+    }
+    
+    {
+        char* OSGNOTIFYLEVEL=getenv("OSG_NOTIFY_LEVEL");
+        if (!OSGNOTIFYLEVEL) OSGNOTIFYLEVEL=getenv("OSGNOTIFYLEVEL");
+        if(OSGNOTIFYLEVEL)
+        {
+            osg::NotifySeverity notifyLevel = osg::NOTICE;
+            std::string stringOSGNOTIFYLEVEL(OSGNOTIFYLEVEL);
+
+            // Convert to upper case
+            for(std::string::iterator i=stringOSGNOTIFYLEVEL.begin();
+                i!=stringOSGNOTIFYLEVEL.end();
+                ++i)
+            {
+                *i=toupper(*i);
+            }
+
+            if(stringOSGNOTIFYLEVEL.find("ALWAYS")!=std::string::npos)          notifyLevel=osg::ALWAYS;
+            else if(stringOSGNOTIFYLEVEL.find("FATAL")!=std::string::npos)      notifyLevel=osg::FATAL;
+            else if(stringOSGNOTIFYLEVEL.find("WARN")!=std::string::npos)       notifyLevel=osg::WARN;
+            else if(stringOSGNOTIFYLEVEL.find("NOTICE")!=std::string::npos)     notifyLevel=osg::NOTICE;
+            else if(stringOSGNOTIFYLEVEL.find("DEBUG_INFO")!=std::string::npos) notifyLevel=osg::DEBUG_INFO;
+            else if(stringOSGNOTIFYLEVEL.find("DEBUG_FP")!=std::string::npos)   notifyLevel=osg::DEBUG_FP;
+            else if(stringOSGNOTIFYLEVEL.find("DEBUG")!=std::string::npos)      notifyLevel=osg::DEBUG_INFO;
+            else if(stringOSGNOTIFYLEVEL.find("INFO")!=std::string::npos)       notifyLevel=osg::INFO;
+            else std::cout << "Warning: invalid OSG_NOTIFY_LEVEL set ("<<stringOSGNOTIFYLEVEL<<")"<<std::endl;
+            
+            osg::setNotifyLevel(notifyLevel);
+
         }
     }
 }
@@ -311,6 +356,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         setStatusText("could not read interface from " + ss.str());
     else
     {
+        checkEnvVars();
         setSceneData(node);
         frame();
         node = readPresentation(ss.str(), createOptions(0));
@@ -429,7 +475,8 @@ void IOSViewer::realize()
     
     // seup event handler
     _zeroconfEventHandler = new ZeroConfDiscoverEventHandler();
-    addEventHandler(new IdleTimerEventHandler(MAX_IDLE_TIME));
+    _idleTimerEventHandler = new IdleTimerEventHandler(MAX_IDLE_TIME);
+    addEventHandler(_idleTimerEventHandler);
     addEventHandler(_zeroconfEventHandler);
 
     

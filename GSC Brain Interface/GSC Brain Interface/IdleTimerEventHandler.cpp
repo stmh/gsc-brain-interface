@@ -37,3 +37,9 @@ bool IdleTimerEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIA
     
     return false;
 }
+
+
+ void IdleTimerEventHandler::setNewMaxIdleTime(double max_idle_time) {
+    _maxIdleTime = max_idle_time;
+    OSG_NOTICE << "IdleTimeEventHandler :: new max idle time: " << max_idle_time << std::endl;
+}

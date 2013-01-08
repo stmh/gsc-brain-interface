@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.mm"
-         timestampString = "378836153.027481"
+         timestampString = "379344067.045875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "309"
-         endingLineNumber = "309"
+         startingLineNumber = "354"
+         endingLineNumber = "354"
          landmarkName = "IOSViewer::readScene(const std::string&amp; host, unsigned int port)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -225,7 +225,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPlugins/p3d/ReaderWriterP3D.cpp"
@@ -251,7 +251,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPlugins/p3d/ReaderWriterP3D.cpp"
@@ -262,6 +262,45 @@
          endingLineNumber = "2157"
          landmarkName = "readServer(ObjectType type, const std::string&amp; filename, const osgDB::Options* options)"
          landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "379343998.043053"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "299"
+         endingLineNumber = "299"
+         landmarkName = "IOSViewer::checkEnvVars()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "379344000.998218"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "311"
+         endingLineNumber = "311"
+         landmarkName = "IOSViewer::checkEnvVars()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GSC Brain Interface/IOSViewer.mm"
+         timestampString = "379344320.770035"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "326"
+         endingLineNumber = "326"
+         landmarkName = "IOSViewer::checkEnvVars()"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

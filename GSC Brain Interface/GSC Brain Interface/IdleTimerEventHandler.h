@@ -15,11 +15,15 @@ class IdleTimerEventHandler : public osgGA::GUIEventHandler {
 public:
     IdleTimerEventHandler(double max_idle_time)
         : osgGA::GUIEventHandler()
-        , _maxIdleTime(max_idle_time)
+        , _maxIdleTime()
     {
+        setNewMaxIdleTime(max_idle_time);
     }
     
     virtual bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa, osg::Object*, osg::NodeVisitor* nv);
+    
+    void setNewMaxIdleTime(double max_idle_time);
+    
 private:
     double _maxIdleTime, _lastEventTimeStamp;
     

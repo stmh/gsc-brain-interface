@@ -13,6 +13,7 @@
 #include <osgText/Text>
 #include <osg/ImageStream>
 #include "ZeroConfDiscoverEventHandler.h"
+#include "IdleTimerEventHandler.h"
 
 #include "TargetConditionals.h"
 
@@ -52,5 +53,6 @@ private:
     osg::ref_ptr<osg::ImageStream> _maintenanceMovie;
     bool _sceneLoaded, _isLocalScene;
     osg::ref_ptr<ZeroConfDiscoverEventHandler> _zeroconfEventHandler;
+    osg::ref_ptr<IdleTimerEventHandler> _idleTimerEventHandler;
 
 };
