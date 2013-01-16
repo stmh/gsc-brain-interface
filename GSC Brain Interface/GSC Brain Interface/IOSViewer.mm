@@ -22,6 +22,10 @@
 #include "ZeroConfDiscoverEventHandler.h"
 #include "IdleTimerEventHandler.h"
 
+#include <mach/mach.h>
+#include <mach/mach_host.h>
+
+
 #if TESTING
     #include "TestFlight.h"
 #endif
@@ -237,12 +241,16 @@ IOSViewer::IOSViewer()
     , _sceneLoaded(false)
     , _isLocalScene(false)
 {
-    osg::setNotifyLevel(osg::WARN);
+    osg::setNotifyLevel(osg::NOTICE);
     
     TestflightNotifyHandler* nh =new TestflightNotifyHandler();
     osg::setNotifyHandler(nh);
     
     addEventHandler(new DebugConsoleEventHandler(nh));
+    
+    osg::ref_ptr<osgDB::ReaderWriter::Options> cacheAllOption = new osgDB::ReaderWriter::Options;
+    cacheAllOption->setObjectCacheHint(osgDB::ReaderWriter::Options::CACHE_ALL);
+    osgDB::Registry::instance()->setOptions(cacheAllOption.get());
 }
 
 void IOSViewer::addDataFolder(const std::string& folder)
@@ -350,7 +358,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
     OSG_NOTICE << "reading interface from " << ss.str() << std::endl;
 
     // ScopedNotifyLevel l(osg::DEBUG_INFO, "READ SCENE DATA");
-    
+    showMem("before loading");
     osg::ref_ptr<osg::Node> node = readHoldingSlide(ss.str());
     if (!node)
         setStatusText("could not read interface from " + ss.str());
@@ -359,6 +367,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         checkEnvVars();
         setSceneData(node);
         frame();
+        showMem("after loading");
         node = readPresentation(ss.str(), createOptions(0));
         if(node) {
             setSceneData(node);
@@ -552,6 +561,39 @@ void IOSViewer::wakeUp()
 {
     checkForLocalFile();
     sendInit();
+}
+
+bool getSystemMemoryUsage(unsigned long &free_mem, unsigned long &used_mem, unsigned long &mem_size)
+{
+	mach_port_t host_port;
+	mach_msg_type_number_t host_size;
+	vm_size_t pagesize;
+	
+	host_port = mach_host_self();
+	host_size = sizeof(vm_statistics_data_t) / sizeof(integer_t);
+	host_page_size(host_port, &pagesize);
+	
+	vm_statistics_data_t vm_stat;
+	
+	if (host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size) != KERN_SUCCESS)
+		return false;
+	
+	/* Stats in bytes */
+	natural_t mem_used = (vm_stat.active_count + vm_stat.inactive_count + vm_stat.wire_count) * pagesize;
+	natural_t mem_free = vm_stat.free_count * pagesize;
+	natural_t mem_total = mem_used + mem_free;
+	used_mem = round(mem_used);
+	free_mem = round(mem_free);
+	mem_size = round(mem_total);
+	return true;
+}
+
+
+void IOSViewer::showMem(const std::string& msg) {
+    unsigned long freemem, used_mem, mem_size;
+    getSystemMemoryUsage(freemem,used_mem, mem_size);
+    std::cout << msg << "  free: " << freemem << " used: " << used_mem << std::endl;
+    
 }
 
 void IOSViewer::sendInit()

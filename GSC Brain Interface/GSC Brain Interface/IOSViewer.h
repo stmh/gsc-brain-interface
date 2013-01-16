@@ -41,7 +41,14 @@ public:
     void wakeUp();
     void sendInit();
     
+    virtual void frame (double simulationTime=USE_REFERENCE_TIME) {
+        showMem("before frame");
+        osgViewer::Viewer::frame(simulationTime);
+        showMem("after frame");
+    }
+    
 protected:
+    void showMem(const std::string& msg);
     osg::Node* setupHud();
     void checkEnvVars();
     

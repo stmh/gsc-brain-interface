@@ -7,17 +7,14 @@
 -->
 <presentation>
 <env>OSG_STEREO=OFF</env>
-<env>OSG_NOTIFY_LEVEL=ALWAYS</env>
-<env>P3D_TIMEOUT=100</env>
-<env>P3D_DEVICE=192.168.0.90:9000.sender.osc <!-- _p3d_osc._udp:9000.advertise.zeroconf --></env> 
+<!--<env>P3D_DEVICE=192.168.0.90:9000.sender.osc</env>-->
 
 <holding_slide>
 <duration></duration>
 <background></background>
 <title></title>
 <layer>
-<paragraph position="0.4 0.5 0.1" text_alignment="centre" font="nevis.ttf" character_size="0.05">LOADING...</paragraph>
-<paragraph position="0.4 0.4 0.1" text_alignment="centre" font="nevis.ttf" character_size="0.05">test2</paragraph>
+<paragraph position="0.4 0.5 0.1" text_alignment="centre" font="fonts/nevis.ttf" character_size="0.05">LOADING...</paragraph>
 
 </layer>
 </holding_slide>
@@ -30,11 +27,9 @@
     <duration>18</duration>
 
     <layer>
- <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
- <image hud="on" scale="0.6" position="0.3 0.25 0.0">bx1.png</image>
-
- <paragraph hud="on" position="0.35 0.6 0.01" font="nevis.ttf" character_size="0.03">SELECT SECTION TO START</paragraph>
-
+ <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+ <paragraph hud="on" position="0.35 0.38 0.01" font="fonts/nevis.ttf" character_size="0.03">SELECT SECTION TO START</paragraph>
+  <paragraph hud="on" position="0.35 0.3 0.01" font="fonts/nevis.ttf" character_size="0.03">idle movie on main screen</paragraph>
     
     <!-- menu -->
     <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
@@ -68,8 +63,8 @@
 <!-- VH start - movie - select interactive-->
 <clean_layer layer_name="start">
 
-    <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+     
 	
     
     
@@ -90,73 +85,17 @@
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
     
-    <!-- movie control -->
-    
-    <!-- restart movie from beginning 
-    <click_to_event slide_name="section vh" layer_name="start">31</click_to_event>
-    <image position="0.5 0.5 0.01" scale="0.16" fade="0 1">playback-first.png</image>
-    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 1" font="nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
-     -->
+   
+     
      
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
-      
-    </clean_layer>
-    
-    
-    
-    <!-- VH tech -->
-<clean_layer layer_name="tech">
-
-    <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
- <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-    
-     <!-- top menu -->
-     
-	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
-    <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-    
-    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
-    <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-    
-    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
-    <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-    
-    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
-    <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-    
-    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
-    <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-    
-     
- 
-         
-     <!-- side menu -->
-     
-      <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech_alt.png</image>
-     
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -170,16 +109,23 @@
      <click_to_event  slide_name="section vh" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
+
+ <!-- movie control -->
+    
+    <!-- restart movie from beginning -->
+    <click_to_event slide_name="section vh" layer_name="start">31</click_to_event>
+    <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
+    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
       
     </clean_layer>
     
     
-        
-    <!-- VH info interactive-->
-<clean_layer layer_name="info">
+    
+    <!-- VH HELP interactive-->
+<clean_layer layer_name="help">
 
-    <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-	 <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
      <!-- top menu -->
@@ -204,11 +150,11 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+      <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info_alt.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -224,19 +170,14 @@
 
       
     </clean_layer>
-
-
 
 
 <!-- VH ONE interactive-->
 <clean_layer layer_name="one">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-
+    
     
      <!-- top menu -->
      
@@ -257,11 +198,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
@@ -280,10 +221,7 @@
     
 <!-- VH TWO interactive-->    
 <clean_layer layer_name="two">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -305,11 +243,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -329,10 +267,7 @@
 
 <!-- VH THREE interactive-->
 <clean_layer layer_name="three">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -354,11 +289,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -379,10 +314,7 @@
 
 <!-- VH FOUR interactive-->   
    <clean_layer layer_name="four">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -404,11 +336,11 @@
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+    <click_to_event  slide_name="section vh" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section vh" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -439,8 +371,8 @@
 <clean_layer layer_name="start">
 
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+    
     
      <!-- top menu -->
     
@@ -460,22 +392,15 @@
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
-    <!-- movie control -->
-    
-    <!-- restart movie from beginning 
-    <click_to_event slide_name="section ct" layer_name="start">31</click_to_event>
-    <image position="0.5 0.5 0.01" scale="0.16" fade="0 1">playback-first.png</image>
-    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 1" font="nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
-     -->
-     
+   
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -489,16 +414,25 @@
      <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
+
+ <!-- movie control -->
+    
+    <!-- restart movie from beginning -->
+    <click_to_event slide_name="section ct" layer_name="start">31</click_to_event>
+    <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
+    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
+     
+     
       
     </clean_layer>
     
     
     
-    <!-- CT tech -->
-<clean_layer layer_name="tech">
+    <!-- CT HELP interactive-->
+<clean_layer layer_name="help">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
      <!-- top menu -->
@@ -523,60 +457,11 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech_alt.png</image>
+      <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section ct" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
-      
-    </clean_layer>
-    
-        <!-- CT info -->
-<clean_layer layer_name="info">
-
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-    
-     <!-- top menu -->
-     
-	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
-    <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-    
-    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
-    <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-    
-    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
-    <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-    
-    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
-    <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-    
-    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
-    <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-    
-     
- 
-         
-     <!-- side menu -->
-     
-      <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
-     
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info_alt.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -597,10 +482,7 @@
 <!-- CT ONE interactive-->
 <clean_layer layer_name="one">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -623,11 +505,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
@@ -647,10 +529,7 @@
     
 <!-- CT TWO interactive-->    
 <clean_layer layer_name="two">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -672,11 +551,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -696,10 +575,7 @@
 
 <!-- CT THREE interactive-->
 <clean_layer layer_name="three">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -721,11 +597,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -746,10 +622,7 @@
 
 <!-- CT FOUR interactive-->   
    <clean_layer layer_name="four">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -771,11 +644,11 @@
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+    <click_to_event  slide_name="section ct" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section ct" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -800,8 +673,7 @@
 
 <clean_layer layer_name="start">
  
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-     <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
    
     
     
@@ -822,22 +694,15 @@
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
     
      
-       <!-- movie control -->
-    
-    <!-- restart movie from beginning 
-    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
-    <image position="0.5 0.5 0.01" scale="0.16" fade="0 1">playback-first.png</image>
-    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 1" font="nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
-     -->
-     
+ 
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -851,17 +716,25 @@
      <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
+
+      <!-- movie control -->
+    
+    <!-- restart movie from beginning -->
+    <click_to_event slide_name="section mri" layer_name="start">*</click_to_event>
+    <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
+    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
+     
+     
       
     </clean_layer>
     
     
     
-<!-- MRI tech -->
-<clean_layer layer_name="tech">
+<!-- MRI HELP interactive-->
+<clean_layer layer_name="help">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-      <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
      <!-- top menu -->
@@ -886,63 +759,11 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech_alt.png</image>
+      <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section mri" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
-      
-    </clean_layer>
-    
-    
-    <!-- MRI info -->
-<clean_layer layer_name="info">
-
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-      <image hud="on" scale="0.2" position="0.14 0.05 0.0">bx1.png</image>
-
-    
-    
-     <!-- top menu -->
-     
-	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
-    <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-    
-    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
-    <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-    
-    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
-    <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-    
-    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
-    <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-    
-    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
-    <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-    
-     
- 
-         
-     <!-- side menu -->
-     
-      <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
-     
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info_alt.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -963,10 +784,7 @@
 <!-- MRI ONE interactive-->
 <clean_layer layer_name="one">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
- 
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -989,11 +807,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
@@ -1012,10 +830,7 @@
     
 <!-- MRI TWO interactive-->    
 <clean_layer layer_name="two">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1037,11 +852,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1061,10 +876,7 @@
 
 <!-- MRI THREE interactive-->
 <clean_layer layer_name="three">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-   
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1086,11 +898,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1111,10 +923,7 @@
 
 <!-- MRI FOUR interactive-->   
    <clean_layer layer_name="four">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1136,11 +945,11 @@
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+    <click_to_event  slide_name="section mri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section mri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1165,8 +974,7 @@
 
 <clean_layer layer_name="start">
  
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
    
     
     
@@ -1186,45 +994,46 @@
     <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
      
-     <!-- movie control -->
     
-    <!-- restart movie from beginning 
+   
+     <!-- side menu -->
+     
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
+     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
+
+       <!-- movie control -->
+    
+    <!-- restart movie from beginning -->
     <click_to_event slide_name="section fmri" layer_name="start">31</click_to_event>
-    <image position="0.5 0.5 0.01" scale="0.16" fade="0 1">playback-first.png</image>
-    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 1" font="nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
+    <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
+    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
      
-     -->
-   
-     <!-- side menu -->
      
-     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
-     
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
+      
       
     </clean_layer>
     
     
     
-    <!-- FMRI tech -->
-<clean_layer layer_name="tech">
+    <!-- FMRI HELP interactive-->
+<clean_layer layer_name="help">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-   
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	
     
     
@@ -1250,64 +1059,11 @@
          
      <!-- side menu -->
      
-      <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech_alt.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section fmri" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
-      
-    </clean_layer>
-    
-    
-       
-    <!-- FMRI info -->
-<clean_layer layer_name="info">
-
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-   
-	
-    
-    
-     <!-- top menu -->
-     
-	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
-    <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-    
-    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
-    <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-    
-    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
-    <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-    
-    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
-    <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-    
-    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
-    <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-    
-     
- 
-         
-     <!-- side menu -->
-     
-      <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
-     
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info_alt.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
      <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1323,16 +1079,12 @@
 
       
     </clean_layer>
-
 
 
 <!-- FMRI ONE interactive-->
 <clean_layer layer_name="one">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1355,11 +1107,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
@@ -1378,10 +1130,7 @@
     
 <!-- FMRI TWO interactive-->    
 <clean_layer layer_name="two">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1403,11 +1152,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1427,10 +1176,7 @@
 
 <!-- FMRI THREE interactive-->
 <clean_layer layer_name="three">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-  
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1452,11 +1198,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1477,10 +1223,7 @@
 
 <!-- FMRI FOUR interactive-->   
    <clean_layer layer_name="four">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1502,11 +1245,11 @@
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+    <click_to_event  slide_name="section fmri" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section fmri" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1532,8 +1275,7 @@
 
 <clean_layer layer_name="start">
  
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
     
     
     
@@ -1553,74 +1295,15 @@
     <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
-     
-    <!-- movie control -->
-    
-    <!-- restart movie from beginning 
-    <click_to_event slide_name="section trk" layer_name="start">31</click_to_event>
-    <image position="0.5 0.5 0.01" scale="0.16" fade="0 1">playback-first.png</image>
-    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 1" font="nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
-     
-     -->
+   
    
      <!-- side menu -->
      
-     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
-     
-     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
-     <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-     
-     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
-     <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-     
-     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
-     <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-     
-     <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
-     <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-
-      
-    </clean_layer>
-    
-    
-    
-    <!-- TRK tech interactive-->
-<clean_layer layer_name="tech">
-
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-    
-
-    
-    
-     <!-- top menu -->
-     
-	<click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
-    <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-    
-    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
-    <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-    
-    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
-    <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-    
-    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
-    <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-    
-    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
-    <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-    
-     
-     <!-- side menu -->
-     
-      <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech_alt.png</image>
-     
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1634,16 +1317,26 @@
      <click_to_event  slide_name="section trk" layer_name="four">26</click_to_event>
      <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
 
-      
-    </clean_layer>
-    
-        
-    <!-- TRK info -->
-<clean_layer layer_name="info">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
   
+    <!-- movie control -->
+    
+    <!-- restart movie from beginning -->
+    <click_to_event slide_name="section trk" layer_name="start">31</click_to_event>
+    <image position="0.5 0.5 0.01" scale="0.16" fade="0 0 3 0 5 1">playback-first.png</image>
+    <paragraph hud="on" position="0.42 0.35 0.01" fade="0 0 3 0 5 1" font="fonts/nevis.ttf" character_size="0.025">RESTART MOVIE</paragraph>
+     
+     
+      
+    </clean_layer>
+    
+    
+    
+    <!-- TRK HELP interactive-->
+<clean_layer layer_name="help">
 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
+	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
      <!-- top menu -->
@@ -1664,13 +1357,15 @@
     <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
     
      
+ 
+         
      <!-- side menu -->
      
-      <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+      <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info_alt.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1686,16 +1381,12 @@
 
       
     </clean_layer>
-
 
 
 <!-- TRK ONE interactive-->
 <clean_layer layer_name="one">
 
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-   
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1718,11 +1409,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
@@ -1741,10 +1432,7 @@
     
 <!-- TRK TWO interactive-->    
 <clean_layer layer_name="two">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-  
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1766,11 +1454,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1790,10 +1478,7 @@
 
 <!-- TRK THREE interactive-->
 <clean_layer layer_name="three">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-   
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1815,11 +1500,11 @@
     
      
      <!-- side menu -->
-     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+     <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
@@ -1840,10 +1525,7 @@
 
 <!-- TRK FOUR interactive-->   
    <clean_layer layer_name="four">
-     <image hud="on" scale="1.2" position="0.5 0.5 -0.01">background2.png</image>
-  
-     
-	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+    <image hud="on" position="0.5 0.5 -0.01">background.png</image>
 	<image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
     
     
@@ -1865,11 +1547,11 @@
     
      
      <!-- side menu -->
-    <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
-     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_tech.png</image>
+    <click_to_event  slide_name="section trk" layer_name="start">21</click_to_event>
+     <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
      
-      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
-     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_info.png</image>
+      <click_to_event  slide_name="section trk" layer_name="help">22</click_to_event>
+     <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
      
      <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
      <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>

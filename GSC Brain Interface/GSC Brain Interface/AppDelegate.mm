@@ -6,6 +6,8 @@
 #endif
 
 
+
+
 @implementation AppDelegate
 
 //
@@ -37,7 +39,7 @@
 //Timer called function to update our scene and render the viewer
 //
 - (void)updateScene {
-	_app->frame();
+    _app->frame();
 }
 
 
