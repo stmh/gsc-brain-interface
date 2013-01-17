@@ -18,6 +18,7 @@
 #include <osgGA/TrackballManipulator>
 #include <osgGA/Device>
 #include <osgGA/GUIEventHandler>
+#include <osgUtil/Optimizer>
 #include <stdlib.h>
 #include "ZeroConfDiscoverEventHandler.h"
 #include "IdleTimerEventHandler.h"
@@ -358,7 +359,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
     OSG_NOTICE << "reading interface from " << ss.str() << std::endl;
 
     // ScopedNotifyLevel l(osg::DEBUG_INFO, "READ SCENE DATA");
-    showMem("before loading");
+    // showMem("before loading");
     osg::ref_ptr<osg::Node> node = readHoldingSlide(ss.str());
     if (!node)
         setStatusText("could not read interface from " + ss.str());
@@ -367,7 +368,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         checkEnvVars();
         setSceneData(node);
         frame();
-        showMem("after loading");
+        // showMem("after loading");
         node = readPresentation(ss.str(), createOptions(0));
         if(node) {
             setSceneData(node);
@@ -518,6 +519,8 @@ void IOSViewer::realize()
 
 void IOSViewer::setSceneData(osg::Node *node)
 {
+    osgUtil::Optimizer optimizer;
+    optimizer.optimize(node);
     osgViewer::Viewer::setSceneData(node);
     
     /* does not work
