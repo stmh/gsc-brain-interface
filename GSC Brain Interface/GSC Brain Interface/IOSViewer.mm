@@ -371,6 +371,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
         node = readPresentation(ss.str(), createOptions(0));
         if(node) {
             setSceneData(node);
+            sendInit();
             _sceneLoaded = true;
             _isLocalScene = false;
         }
@@ -604,6 +605,8 @@ void IOSViewer::sendInit()
     {
         getEventQueue()->keyPress(' ');
         getEventQueue()->keyRelease(' ');
+        getEventQueue()->keyPress(osgGA::GUIEventAdapter::KEY_Home);
+        getEventQueue()->keyRelease(osgGA::GUIEventAdapter::KEY_Home);
     }
 }
 

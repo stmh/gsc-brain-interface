@@ -621,7 +621,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62E65546-3D77-4696-9EBA-F1A39B642FC8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1F7CB4E-E70A-462A-BE77-751E8F768C1C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
