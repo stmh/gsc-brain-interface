@@ -361,24 +361,25 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
     // ScopedNotifyLevel l(osg::DEBUG_INFO, "READ SCENE DATA");
     
     osg::ref_ptr<osg::Node> node = readHoldingSlide(ss.str());
-    if (!node)
-        setStatusText("could not read interface from " + ss.str());
-    else
-    {
-        checkEnvVars();
+    checkEnvVars();
+    if (node) {
         setSceneData(node);
         frame();
-        node = readPresentation(ss.str(), createOptions(0));
-        if(node) {
-            setSceneData(node);
-            sendInit();
-            _sceneLoaded = true;
-            _isLocalScene = false;
-        }
-        if (_maintenanceMovie.valid())
-            _maintenanceMovie->pause();
     }
     
+    node = readPresentation(ss.str(), createOptions(0));
+    if(node) {
+        setSceneData(node);
+        sendInit();
+        _sceneLoaded = true;
+        _isLocalScene = false;
+    
+        if (_maintenanceMovie.valid())
+            _maintenanceMovie->pause();
+        
+    } else {
+        setStatusText("could not read interface from " + ss.str());
+    }
     checkEnvVars();
 }
 
