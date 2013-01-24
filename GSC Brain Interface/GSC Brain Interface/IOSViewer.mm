@@ -352,7 +352,7 @@ void IOSViewer::readScene(const std::string& host, unsigned int port)
 {
     if (_sceneLoaded && !_isLocalScene)
         return;
-    
+    osgDB::Registry::instance()->clearObjectCache();
     std::ostringstream ss;
     ss << "http://" << host << ":" << port << "/" << INTERFACE_FILE_NAME;
 
@@ -613,5 +613,5 @@ void IOSViewer::sendInit()
 
 void IOSViewer::handleMemoryWarning()
 {
-
+    osgDB::Registry::instance()->clearObjectCache();
 }
