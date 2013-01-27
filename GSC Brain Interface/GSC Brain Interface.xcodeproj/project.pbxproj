@@ -110,7 +110,7 @@
 		D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_QTKitd.so; path = ../../../osg/build/lib/osgdb_QTKitd.so; sourceTree = "<group>"; };
 		D45152A21673AE5300193443 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = assets/arial.ttf; sourceTree = SOURCE_ROOT; };
 		D4A2CFE016725F8100DFB201 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = "../../3rdParty-libs/include/TestFlight.h"; sourceTree = "<group>"; };
-		D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gsc brain interface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D6A1FC166BABC7005BDE49 /* brainXplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brainXplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -213,7 +213,7 @@
 		D4D6A1FD166BABC7005BDE49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */,
+				D4D6A1FC166BABC7005BDE49 /* brainXplorer.app */,
 				D450A1D11671F6FD003A6A02 /* gsc brain interface osx */,
 			);
 			name = Products;
@@ -301,9 +301,9 @@
 			productReference = D450A1D11671F6FD003A6A02 /* gsc brain interface osx */;
 			productType = "com.apple.product-type.tool";
 		};
-		D4D6A1FB166BABC7005BDE49 /* gsc brain interface */ = {
+		D4D6A1FB166BABC7005BDE49 /* brainXplorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "gsc brain interface" */;
+			buildConfigurationList = D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "brainXplorer" */;
 			buildPhases = (
 				D4D6A1F8166BABC7005BDE49 /* Sources */,
 				D4D6A1F9166BABC7005BDE49 /* Frameworks */,
@@ -313,9 +313,9 @@
 			);
 			dependencies = (
 			);
-			name = "gsc brain interface";
+			name = brainXplorer;
 			productName = "GSC Brain Interface";
-			productReference = D4D6A1FC166BABC7005BDE49 /* gsc brain interface.app */;
+			productReference = D4D6A1FC166BABC7005BDE49 /* brainXplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +339,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4D6A1FB166BABC7005BDE49 /* gsc brain interface */,
+				D4D6A1FB166BABC7005BDE49 /* brainXplorer */,
 				D450A1D01671F6FD003A6A02 /* gsc brain interface osx */,
 			);
 		};
@@ -566,7 +566,7 @@
 					"-losgdb_freetyped",
 					"-losgdb_avfoundationd",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = brainXplorer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -620,8 +620,8 @@
 					"-ltestflight",
 					"-lz",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1F7CB4E-E70A-462A-BE77-751E8F768C1C";
+				PRODUCT_NAME = brainXplorer;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D38A9C46-FF62-4B27-AF4A-6C9BE2012D85";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -647,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "gsc brain interface" */ = {
+		D4D6A21A166BABC7005BDE49 /* Build configuration list for PBXNativeTarget "brainXplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4D6A21B166BABC7005BDE49 /* Debug */,

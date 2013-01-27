@@ -27,7 +27,7 @@
 				<string>ipad-icon@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>UINewsstandIcon</key>
 		<dict>
@@ -62,6 +62,8 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>2012 by openscenegraph.org</string>
 	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
