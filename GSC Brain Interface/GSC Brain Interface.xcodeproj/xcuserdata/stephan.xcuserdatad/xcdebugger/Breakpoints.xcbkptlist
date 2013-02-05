@@ -72,71 +72,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPresentation/PickEventHandler.cpp"
-         timestampString = "378830142.596795"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
-         landmarkName = "PickEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea,osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPresentation/PickEventHandler.cpp"
-         timestampString = "378830142.596795"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
-         landmarkName = "PickEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea,osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPresentation/PickEventHandler.cpp"
-         timestampString = "378831768.510449"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "PickEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea,osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPresentation/PickEventHandler.cpp"
-         timestampString = "378831768.510449"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
-         landmarkName = "PickEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea,osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPresentation/PickEventHandler.cpp"
-         timestampString = "378830244.349361"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
-         landmarkName = "PickEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea,osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPlugins/curl/ReaderWriterCURL.cpp"
          timestampString = "378836686.764376"
          startingColumnNumber = "9223372036854775807"
@@ -176,19 +111,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPlugins/p3d/ReaderWriterP3D.cpp"
-         timestampString = "378838683.112631"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "2155"
-         endingLineNumber = "2155"
-         landmarkName = "readServer(ObjectType type, const std::string&amp; filename, const osgDB::Options* options)"
-         landmarkType = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/SlideShowConstructor.cpp"
          timestampString = "378838778.50072"
          startingColumnNumber = "9223372036854775807"
@@ -221,8 +143,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "2034"
          endingLineNumber = "2034"
-         landmarkName = "findDataFile(const std::string&amp; filename, const osgDB::Options* options, osgDB::CaseSensitivity caseSensitivity)"
-         landmarkType = "7">
+         landmarkName = "ReaderWriterP3DXML::parsePage(osgPresentation::SlideShowConstructor&amp; constructor, osgDB::XmlNode*cur)"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -241,25 +163,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "../../osg/src/osgPlugins/p3d/ReaderWriterP3D.cpp"
-         timestampString = "378839202.77198"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "2157"
-         endingLineNumber = "2157"
-         landmarkName = "readServer(ObjectType type, const std::string&amp; filename, const osgDB::Options* options)"
-         landmarkType = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.mm"
-         timestampString = "380222986.939507"
+         timestampString = "381166524.010692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "308"
-         endingLineNumber = "308"
+         startingLineNumber = "312"
+         endingLineNumber = "312"
          landmarkName = "IOSViewer::checkEnvVars()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -268,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.mm"
-         timestampString = "380222986.939507"
+         timestampString = "381166524.010692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "320"
-         endingLineNumber = "320"
+         startingLineNumber = "324"
+         endingLineNumber = "324"
          landmarkName = "IOSViewer::checkEnvVars()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.mm"
-         timestampString = "380222986.939507"
+         timestampString = "381166524.010692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "335"
-         endingLineNumber = "335"
+         startingLineNumber = "339"
+         endingLineNumber = "339"
          landmarkName = "IOSViewer::checkEnvVars()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -293,25 +202,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
-         timestampString = "380048837.156459"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
-         landmarkName = "ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const std::string&amp; host, unsigned int port)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "GSC Brain Interface/IOSViewer.mm"
-         timestampString = "380222986.939507"
+         timestampString = "381166524.010692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "309"
-         endingLineNumber = "309"
+         startingLineNumber = "313"
+         endingLineNumber = "313"
          landmarkName = "IOSViewer::checkEnvVars()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -332,45 +228,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
-         timestampString = "380462872.754117"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
-         landmarkName = "ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const std::string&amp; host, unsigned int port)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
-         timestampString = "380463041.767247"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
-         landmarkName = "ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GSC Brain Interface/ZeroConfDiscoverEventHandler.cpp"
-         timestampString = "380463106.647373"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
-         landmarkName = "ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter&amp; ea, osgGA::GUIActionAdapter&amp; aa, osg::Object*, osg::NodeVisitor* nv)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/Timeout.cpp"
          timestampString = "380463719.833775"
          startingColumnNumber = "9223372036854775807"
@@ -381,7 +238,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/Timeout.cpp"
@@ -394,7 +251,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/Timeout.cpp"
@@ -459,7 +316,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../osg/src/osgPresentation/Timeout.cpp"
@@ -484,6 +341,32 @@
          landmarkName = "Timeout::traverse(osg::NodeVisitor&amp; nv)"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/osc/ReaderWriterOscDevice.cpp"
+         timestampString = "381746735.803103"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
+         landmarkName = "readObject(const std::string&amp; file, const osgDB::ReaderWriter::Options* options =NULL)"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../osg/src/osgPlugins/osc/ReaderWriterOscDevice.cpp"
+         timestampString = "381746753.363156"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "108"
+         endingLineNumber = "108"
+         landmarkName = "readObject(const std::string&amp; file, const osgDB::ReaderWriter::Options* options =NULL)"
+         landmarkType = "7">
+      </FileBreakpoint>
    </FileBreakpoints>
    <SymbolicBreakpoints>
       <SymbolicBreakpoint
@@ -491,6 +374,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          symbolName = "Timeout::traverse(osg::NodeVisitor&amp; nv)"
+         moduleName = "">
+      </SymbolicBreakpoint>
+      <SymbolicBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         symbolName = "ReaderWriterOsc::readObject(const std::string&amp; file, const osgDB::ReaderWriter::Options* options ) const"
          moduleName = "">
       </SymbolicBreakpoint>
    </SymbolicBreakpoints>
