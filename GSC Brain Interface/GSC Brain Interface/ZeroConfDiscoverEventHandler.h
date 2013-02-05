@@ -22,6 +22,8 @@ public:
     
     void startEventForwarding(IOSViewer* viewer, const std::string& host, unsigned int port);
     
+    void removeAllSendingOSCDevices(IOSViewer* viewer);
+    
     static const char* httpServiceType() { return "_p3d_http._tcp"; }
     static const char* oscServiceType() { return "_p3d_osc._udp"; }
             

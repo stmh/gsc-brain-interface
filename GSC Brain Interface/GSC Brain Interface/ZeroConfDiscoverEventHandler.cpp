@@ -51,6 +51,7 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
             }
             else if (type == oscServiceType() && (!_discoveredDevice.valid()))
             {
+                removeAllSendingOSCDevices(viewer);
                 startEventForwarding(viewer, host, port);
             }
         }
@@ -63,12 +64,34 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
                 viewer->showMaintenanceScene();
             else if(type == oscServiceType())
             {
-                viewer->removeDevice(_discoveredDevice);
+                removeAllSendingOSCDevices(viewer);
                 _discoveredDevice = NULL;
             }
         }
     }
     return false;
+}
+
+void ZeroConfDiscoverEventHandler::removeAllSendingOSCDevices(IOSViewer* viewer)
+{
+    osgViewer::View::Devices devices = viewer->getDevices();
+    std::vector<osgGA::Device*> to_delete;
+    
+    for(osgViewer::View::Devices::iterator i = devices.begin(); i != devices.end(); ++i) {
+        osgGA::Device* device(*i);
+        if (device->getCapabilities() | osgGA::Device::SEND_EVENTS) {
+            std::string class_name(device->className());
+            if (class_name.find("OSC") != std::string::npos) {
+                to_delete.push_back(device);
+            }
+        }
+    }
+    
+    for(std::vector<osgGA::Device*>::iterator j = to_delete.begin(); j != to_delete.end(); ++j) {
+        viewer->removeDevice(*j);
+    }
+    OSG_ALWAYS << "removed " << to_delete.size() << " sending OSC devices" << std::endl;
+
 }
 
 void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const std::string& host, unsigned int port)
@@ -80,8 +103,8 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     {
         viewer->removeDevice(_discoveredDevice.get());
     }
-    
-    _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str());
+    osg::ref_ptr<osgDB::Options> options = new osgDB::Options("numMessagesPerEvent=3 delayBetweenSendsInMillisecs=0");
+    _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str(), options);
     if (!_discoveredDevice.valid())
     {
         viewer->setStatusText("could not get osc-device: " + ss.str());

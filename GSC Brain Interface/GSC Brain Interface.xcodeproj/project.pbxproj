@@ -621,7 +621,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = brainXplorer;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D38A9C46-FF62-4B27-AF4A-6C9BE2012D85";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C859E4C8-F1A6-412A-BB49-18E1B29D031D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -244,10 +244,12 @@ IOSViewer::IOSViewer()
 {
     osg::setNotifyLevel(osg::NOTICE);
     
+#if TESTING
     TestflightNotifyHandler* nh =new TestflightNotifyHandler();
     osg::setNotifyHandler(nh);
     
     addEventHandler(new DebugConsoleEventHandler(nh));
+#endif
     
     osg::ref_ptr<osgDB::ReaderWriter::Options> cacheAllOption = new osgDB::ReaderWriter::Options;
     cacheAllOption->setObjectCacheHint(osgDB::ReaderWriter::Options::CACHE_ALL);
@@ -273,6 +275,8 @@ void IOSViewer::showMaintenanceScene() {
     setSceneData(_maintenanceScene);
     getEventQueue()->keyPress(' ');
     getEventQueue()->keyRelease(' ');
+    
+    putenv("P3D_DEVICE=");
     
     if (_maintenanceMovie.valid())
         _maintenanceMovie->play();
