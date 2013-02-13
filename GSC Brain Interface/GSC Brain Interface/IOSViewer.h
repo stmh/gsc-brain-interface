@@ -42,6 +42,7 @@ public:
     void sendInit();
     
     
+    void reloadDevices();
     
 protected:
     void showMem(const std::string& msg);

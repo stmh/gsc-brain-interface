@@ -252,7 +252,7 @@ IOSViewer::IOSViewer()
 #endif
     
     osg::ref_ptr<osgDB::ReaderWriter::Options> cacheAllOption = new osgDB::ReaderWriter::Options;
-    cacheAllOption->setObjectCacheHint(osgDB::ReaderWriter::Options::CACHE_ALL);
+    cacheAllOption->setObjectCacheHint(osgDB::ReaderWriter::Options::CACHE_IMAGES);
     osgDB::Registry::instance()->setOptions(cacheAllOption.get());
 }
 
@@ -495,6 +495,41 @@ void IOSViewer::realize()
     addEventHandler(_zeroconfEventHandler);
 
     
+    
+    _maintenanceScene = group;
+    
+    setSceneData(group);
+    
+    checkForLocalFile();
+    
+    reloadDevices();
+    
+    osgViewer::Viewer::realize();
+}
+
+void IOSViewer::reloadDevices() {
+    
+    if (_sceneLoaded)
+        return;
+    
+    osgViewer::View::Devices devices = getDevices();
+    std::vector<osgGA::Device*> to_delete;
+    
+    for(osgViewer::View::Devices::iterator i = devices.begin(); i != devices.end(); ++i) {
+        osgGA::Device* device(*i);
+        if (device->getCapabilities() | osgGA::Device::SEND_EVENTS) {
+            to_delete.push_back(device);
+        }
+    }
+    
+    for(std::vector<osgGA::Device*>::iterator j = to_delete.begin(); j != to_delete.end(); ++j) {
+        removeDevice(*j);
+    }
+    
+    OSG_ALWAYS << "removed " << to_delete.size() << " devices" << std::endl;
+    
+    setStatusText("Reloading zeroconf devices, waiting for http-server/interface-file ...");
+    
     // setup zeroconf
     std::vector<std::string> service_types;
     service_types.push_back(ZeroConfDiscoverEventHandler::httpServiceType());
@@ -506,20 +541,12 @@ void IOSViewer::realize()
         if (device)
         {
             addDevice(device);
-
+            
         }
         else
             setStatusText("could not get zeroconf-device: " + (*i));
     }
     
-    
-    _maintenanceScene = group;
-    
-    setSceneData(group);
-    
-    checkForLocalFile();
-    
-    osgViewer::Viewer::realize();
 }
 
 void IOSViewer::setSceneData(osg::Node *node)

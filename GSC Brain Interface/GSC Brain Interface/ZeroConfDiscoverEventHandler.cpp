@@ -69,6 +69,12 @@ bool ZeroConfDiscoverEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgG
             }
         }
     }
+    if (ea.isMultiTouchEvent() && (ea.getTouchData()->getNumTouchPoints() == 1)) {
+        if (ea.getTouchData()->begin()->tapCount == 3) {
+            viewer->reloadDevices();
+            
+        }
+    }
     return false;
 }
 
@@ -103,7 +109,7 @@ void ZeroConfDiscoverEventHandler::startEventForwarding(IOSViewer* viewer, const
     {
         viewer->removeDevice(_discoveredDevice.get());
     }
-    osg::ref_ptr<osgDB::Options> options = new osgDB::Options("numMessagesPerEvent=3 delayBetweenSendsInMillisecs=0");
+    osg::ref_ptr<osgDB::Options> options = new osgDB::Options("numMessagesPerEvent=3 delayBetweenSendsInMillisecs=10");
     _discoveredDevice = osgDB::readFile<osgGA::Device>(ss.str(), options);
     if (!_discoveredDevice.valid())
     {
