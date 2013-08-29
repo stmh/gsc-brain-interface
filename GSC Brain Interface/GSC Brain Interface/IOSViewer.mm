@@ -19,6 +19,7 @@
 #include <osgGA/Device>
 #include <osgGA/GUIEventHandler>
 #include <osgUtil/Optimizer>
+#include <osg/Version>
 #include <stdlib.h>
 #include "ZeroConfDiscoverEventHandler.h"
 #include "IdleTimerEventHandler.h"
@@ -243,6 +244,7 @@ IOSViewer::IOSViewer()
     , _isLocalScene(false)
 {
     osg::setNotifyLevel(osg::NOTICE);
+    std::cout << "osg Version: " << osgGetVersion() << std::endl;
     
 #if TESTING
     TestflightNotifyHandler* nh =new TestflightNotifyHandler();
