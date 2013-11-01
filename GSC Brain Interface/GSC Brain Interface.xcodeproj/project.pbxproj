@@ -36,6 +36,9 @@
 		D450A1F91671FCE1003A6A02 /* osgdb_freetyped.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1F81671FCD8003A6A02 /* osgdb_freetyped.so */; };
 		D450A1FB16721065003A6A02 /* osgdb_QTKitd.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */; };
 		D45152A31673AE5300193443 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D45152A21673AE5300193443 /* arial.ttf */; };
+		D4B67E391823F68200C65864 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B67E381823F68200C65864 /* Images.xcassets */; };
+		D4B67E3C1823F70200C65864 /* ipad-icon-ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B67E3A1823F70200C65864 /* ipad-icon-ios7.png */; };
+		D4B67E3D1823F70200C65864 /* ipad-icon-ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B67E3B1823F70200C65864 /* ipad-icon-ios7@2x.png */; };
 		D4D6A201166BABC7005BDE49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A200166BABC7005BDE49 /* UIKit.framework */; };
 		D4D6A203166BABC7005BDE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A202166BABC7005BDE49 /* Foundation.framework */; };
 		D4D6A205166BABC7005BDE49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D6A204166BABC7005BDE49 /* CoreGraphics.framework */; };
@@ -110,6 +113,9 @@
 		D450A1FA16721061003A6A02 /* osgdb_QTKitd.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = osgdb_QTKitd.so; path = ../../../osg/build/lib/osgdb_QTKitd.so; sourceTree = "<group>"; };
 		D45152A21673AE5300193443 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = assets/arial.ttf; sourceTree = SOURCE_ROOT; };
 		D4A2CFE016725F8100DFB201 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = "../../3rdParty-libs/include/TestFlight.h"; sourceTree = "<group>"; };
+		D4B67E381823F68200C65864 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = brainXplorer/Images.xcassets; sourceTree = "<group>"; };
+		D4B67E3A1823F70200C65864 /* ipad-icon-ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ipad-icon-ios7.png"; path = "assets/ipad-icon-ios7.png"; sourceTree = SOURCE_ROOT; };
+		D4B67E3B1823F70200C65864 /* ipad-icon-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ipad-icon-ios7@2x.png"; path = "assets/ipad-icon-ios7@2x.png"; sourceTree = SOURCE_ROOT; };
 		D4D6A1FC166BABC7005BDE49 /* brainXplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brainXplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6A200166BABC7005BDE49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D6A202166BABC7005BDE49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,6 +209,7 @@
 		D4D6A1F1166BABC7005BDE49 = {
 			isa = PBXGroup;
 			children = (
+				D4B67E381823F68200C65864 /* Images.xcassets */,
 				D4D6A206166BABC7005BDE49 /* GSC Brain Interface */,
 				D450A1D31671F6FD003A6A02 /* gsc brain interface osx */,
 				D4D6A1FF166BABC7005BDE49 /* Frameworks */,
@@ -263,6 +270,8 @@
 		D4D6A207166BABC7005BDE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4B67E3A1823F70200C65864 /* ipad-icon-ios7.png */,
+				D4B67E3B1823F70200C65864 /* ipad-icon-ios7@2x.png */,
 				D45152A21673AE5300193443 /* arial.ttf */,
 				D412F631166F55960094569C /* ipad-icon@2x.png */,
 				D412F62F166F558D0094569C /* ipad-icon.png */,
@@ -350,13 +359,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B67E3C1823F70200C65864 /* ipad-icon-ios7.png in Resources */,
 				D4D6A20B166BABC7005BDE49 /* InfoPlist.strings in Resources */,
 				D4D6A213166BABC7005BDE49 /* Default.png in Resources */,
+				D4B67E3D1823F70200C65864 /* ipad-icon-ios7@2x.png in Resources */,
 				D4D6A215166BABC7005BDE49 /* Default@2x.png in Resources */,
 				D4D6A217166BABC7005BDE49 /* Default-568h@2x.png in Resources */,
 				D4D6A233166BB044005BDE49 /* Default-Portrait@2x~ipad.png in Resources */,
 				D4D6A235166BB047005BDE49 /* Default-Portrait~ipad.png in Resources */,
 				D4D6A237166BB04A005BDE49 /* Default-Landscape~ipad.png in Resources */,
+				D4B67E391823F68200C65864 /* Images.xcassets in Resources */,
 				D4D6A239166BB04C005BDE49 /* Default-Landscape@2x~ipad.png in Resources */,
 				D412F630166F558D0094569C /* ipad-icon.png in Resources */,
 				D412F632166F55960094569C /* ipad-icon@2x.png in Resources */,
@@ -522,9 +534,13 @@
 		D4D6A21B166BABC7005BDE49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_ENTITLEMENTS = "GSC Brain Interface/GSC Brain Interface.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephan Huber (2XUQF7PGXX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../libs/include\"";
@@ -567,6 +583,8 @@
 					"-losgdb_avfoundationd",
 				);
 				PRODUCT_NAME = brainXplorer;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -574,10 +592,12 @@
 		D4D6A21C166BABC7005BDE49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_ENTITLEMENTS = "GSC Brain Interface/GSC Brain Interface.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stephan Huber";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GSC Brain Interface/GSC Brain Interface-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -621,7 +641,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = brainXplorer;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C859E4C8-F1A6-412A-BB49-18E1B29D031D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

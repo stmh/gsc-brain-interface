@@ -6,1295 +6,1107 @@
     Description: iPad interface
 -->
 <presentation>
-    <env>OSG_STEREO=OFF</env>
-    <env>OSG_NOTIFY_LEVEL=NOTICE</env>
-    <env>P3D_TIMEOUT=100</env>
-    <holding_slide>
-        <duration/>
-        <background/>
-        <title/>
-        <layer>
-            <paragraph character_size="0.05" font="nevis.ttf" position="0.4 0.5 0.1" text_alignment="centre">LOADING...</paragraph>
-        </layer>
-    </holding_slide>
-    <!-- touch to start -->
-    <slide slide_name="begin">
-        <duration>18</duration>
-        <layer>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <paragraph character_size="0.03" font="nevis.ttf" hud="on" position="0.35 0.38 0.01">SELECT SECTION TO START</paragraph>
-            <paragraph character_size="0.03" font="nevis.ttf" hud="on" position="0.35 0.3 0.01">idle movie on main screen</paragraph>
-            <!-- menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.5 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.5 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.5 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.5 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.5 0.01" scale="0.16">but5.png</image>
-        </layer>
-    </slide>
-    <!-- Vis Human section-->
-    <slide slide_name="section vh">
-        <duration>18</duration>
-        <!-- VH start - movie - select interactive-->
-        <clean_layer layer_name="start">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
+<env>OSG_STEREO=OFF</env>
+<env>OSG_NOTIFY_LEVEL=ALWAYS</env>
+<!--<env>P3D_TIMEOUT=100</env>-->
+<!-- <env>P3D_DEVICE=192.168.0.90:9000.sender.osc _p3d_osc._udp:9000.advertise.zeroconf </env> -->
 
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- movie control -->
-            <!-- restart movie from beginning -->
-            <click_to_event layer_name="start" slide_name="section vh">31</click_to_event>
-            <image fade="0 1" position="0.5 0.5 0.01" scale="0.16">playback-first.png</image>
-            <paragraph character_size="0.025" fade="0 1" font="nevis.ttf" hud="on" position="0.42 0.35 0.01">RESTART MOVIE</paragraph>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- VH HELP interactive-->
-        <clean_layer layer_name="help">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- VH ONE interactive-->
-        <clean_layer layer_name="one">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- VH TWO interactive-->
-        <clean_layer layer_name="two">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- VH THREE interactive-->
-        <clean_layer layer_name="three">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- VH FOUR interactive-->
-        <clean_layer layer_name="four">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section vh">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section vh">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section vh">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section vh">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section vh">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section vh">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
-        </clean_layer>
-    </slide>
-    <!-- CT section-->
-    <slide slide_name="section ct">
-        <duration>18</duration>
-        <clean_layer layer_name="start">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- movie control -->
-            <!-- restart movie from beginning -->
-            <click_to_event layer_name="start" slide_name="section ct">31</click_to_event>
-            <image fade="0 1" position="0.5 0.5 0.01" scale="0.16">playback-first.png</image>
-            <paragraph character_size="0.025" fade="0 1" font="nevis.ttf" hud="on" position="0.42 0.35 0.01">RESTART MOVIE</paragraph>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- CT HELP interactive-->
-        <clean_layer layer_name="help">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- CT ONE interactive-->
-        <clean_layer layer_name="one">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- CT TWO interactive-->
-        <clean_layer layer_name="two">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- CT THREE interactive-->
-        <clean_layer layer_name="three">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- CT FOUR interactive-->
-        <clean_layer layer_name="four">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section ct">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section ct">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section ct">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section ct">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section ct">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section ct">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
-        </clean_layer>
-    </slide>
-    <!-- MRI section-->
-    <slide slide_name="section mri">
-        <duration>18</duration>
-        <clean_layer layer_name="start">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- movie control -->
-            <!-- restart movie from beginning -->
-            <click_to_event layer_name="start" slide_name="section mri">*</click_to_event>
-            <image fade="0 1" position="0.5 0.5 0.01" scale="0.16">playback-first.png</image>
-            <paragraph character_size="0.025" fade="0 1" font="nevis.ttf" hud="on" position="0.42 0.35 0.01">RESTART MOVIE</paragraph>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- MRI HELP interactive-->
-        <clean_layer layer_name="help">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- MRI ONE interactive-->
-        <clean_layer layer_name="one">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- MRI TWO interactive-->
-        <clean_layer layer_name="two">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- MRI THREE interactive-->
-        <clean_layer layer_name="three">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- MRI FOUR interactive-->
-        <clean_layer layer_name="four">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section mri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section mri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section mri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section mri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section mri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section mri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
-        </clean_layer>
-    </slide>
-    <!-- fMRIsection-->
-    <slide slide_name="section fmri">
-        <duration>18</duration>
-        <clean_layer layer_name="start">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- movie control -->
-            <!-- restart movie from beginning -->
-            <click_to_event layer_name="start" slide_name="section fmri">31</click_to_event>
-            <image fade="0 1" position="0.5 0.5 0.01" scale="0.16">playback-first.png</image>
-            <paragraph character_size="0.025" fade="0 1" font="nevis.ttf" hud="on" position="0.42 0.35 0.01">RESTART MOVIE</paragraph>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- FMRI HELP interactive-->
-        <clean_layer layer_name="help">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- FMRI ONE interactive-->
-        <clean_layer layer_name="one">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- FMRI TWO interactive-->
-        <clean_layer layer_name="two">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- FMRI THREE interactive-->
-        <clean_layer layer_name="three">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- FMRI FOUR interactive-->
-        <clean_layer layer_name="four">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4_alt.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section fmri">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section fmri">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section fmri">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section fmri">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section fmri">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section fmri">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
-        </clean_layer>
-    </slide>
-    <!-- Tractography section-->
-    <slide slide_name="section trk">
-        <duration>18</duration>
-        <clean_layer layer_name="start">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- movie control -->
-            <!-- restart movie from beginning -->
-            <click_to_event layer_name="start" slide_name="section trk">31</click_to_event>
-            <image fade="0 1" position="0.5 0.5 0.01" scale="0.16">playback-first.png</image>
-            <paragraph character_size="0.025" fade="0 1" font="nevis.ttf" hud="on" position="0.42 0.35 0.01">RESTART MOVIE</paragraph>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov_alt.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- TRK HELP interactive-->
-        <clean_layer layer_name="help">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help_alt.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- TRK ONE interactive-->
-        <clean_layer layer_name="one">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr_alt.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- TRK TWO interactive-->
-        <clean_layer layer_name="two">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr_alt.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- TRK THREE interactive-->
-        <clean_layer layer_name="three">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1_alt.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2.png</image>
-        </clean_layer>
-        <!-- TRK FOUR interactive-->
-        <clean_layer layer_name="four">
-            <timeout>
-                <idle_duration_before_timeout_display>15.0</idle_duration_before_timeout_display>
-                <!-- wait five minutes to display message-->
-                <idle_duration_before_timeout_action>5.0</idle_duration_before_timeout_action>
-                <!-- wait ten seconds of further idle before action-->
-                <timeout_jump layer="0" slide="0"></timeout_jump>
-                <display_broadcast_event>0x10000</display_broadcast_event>
-                <dismiss_broadcast_event>0x10001</dismiss_broadcast_event>
-                <timeout_broadcast_event>0x10002</timeout_broadcast_event>
-                <image width="0.8">background.png</image>
-            </timeout>
-            <image hud="on" position="0.5 0.5 -0.01" scale="1.2">background.png</image>
-            <forward_mouse_event_to_device/>
-            <image position="0.369 0.3939 0.0" scale="0.635">swipe2.png</image>
-            <!-- top menu -->
-            <click_to_event layer_name="start" slide_name="section vh">11</click_to_event>
-            <image position="0.13 0.9 0.01" scale="0.16">but1.png</image>
-            <click_to_event layer_name="start" slide_name="section ct">12</click_to_event>
-            <image position="0.32 0.9 0.01" scale="0.16">but2.png</image>
-            <click_to_event layer_name="start" slide_name="section mri">13</click_to_event>
-            <image position="0.505 0.9 0.01" scale="0.16">but3.png</image>
-            <click_to_event layer_name="start" slide_name="section fmri">14</click_to_event>
-            <image position="0.689 0.9 0.01" scale="0.16">but4.png</image>
-            <click_to_event layer_name="start" slide_name="section trk">15</click_to_event>
-            <image position="0.87 0.9 0.01" scale="0.16">but5_alt.png</image>
-            <!-- side menu -->
-            <click_to_event layer_name="tech" slide_name="section trk">21</click_to_event>
-            <image position="0.83 0.73 0.01" scale_x="0.08" scale_y="0.16">but_mov.png</image>
-            <click_to_event layer_name="info" slide_name="section trk">22</click_to_event>
-            <image position="0.91.73 0.01" scale_x="0.08" scale_y="0.16">but_help.png</image>
-            <click_to_event layer_name="one" slide_name="section trk">23</click_to_event>
-            <image position="0.87 0.56 0.01" scale="0.16">but_hr.png</image>
-            <click_to_event layer_name="two" slide_name="section trk">24</click_to_event>
-            <image position="0.87 0.43 0.01" scale="0.16">but_vr.png</image>
-            <click_to_event layer_name="three" slide_name="section trk">25</click_to_event>
-            <image position="0.87 0.3 0.01" scale="0.16">but_c1.png</image>
-            <click_to_event layer_name="four" slide_name="section trk">26</click_to_event>
-            <image position="0.87 0.17 0.01" scale="0.16">but_c2_alt.png</image>
-        </clean_layer>
-    </slide>
-</presentation>
+<template_layer name="timeout">
+    <timeout>
+        <idle_duration_before_timeout_display>200.0</idle_duration_before_timeout_display>
+        <idle_duration_before_timeout_action>210.0</idle_duration_before_timeout_action>
+        <timeout_jump jump="absolute" slide="0" layer="0"></timeout_jump>
+        <display_broadcast_event>0x1001</display_broadcast_event>
+        <dismiss_broadcast_event>0x1002</dismiss_broadcast_event>
+        <timeout_broadcast_event>0x1003</timeout_broadcast_event>
+        <image scale="1">timeout_ipad.jpg</image>
+    </timeout>
+</template_layer>
+
+<holding_slide>
+<duration></duration>
+<background></background>
+<title></title>
+<layer>
+<paragraph position="0.4 0.5 0.1" text_alignment="centre" font="nevis.ttf" character_size="0.05">LOADING...</paragraph>
+<paragraph position="0.4 0.4 0.1" text_alignment="centre" font="nevis.ttf" character_size="0.05"></paragraph>
+
+</layer>
+</holding_slide>
+
+
+
+  <!-- touch to start -->
+  <slide slide_name="begin">
+
+    <duration>18</duration>
+
+    <layer layer_name="begin">
+ <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+ <image hud="on" fade="0.9" scale="1.2 " position="0.5 0.57 0.0">bx1.png</image>
+ <image hud="on" fade="0.9" scale="0.9" position="0.5 0.61 0.0">choose.png</image>
+
+ 
+
+    
+    <!--start menu -->
+    <click_to_event  slide_name="section vh" layer_name="start">11</click_to_event>
+    <image  position="0.13 0.5 0.01" fade="0.9" scale="0.16">vh.png</image>
+    
+    <click_to_event slide_name="section ct" layer_name="start">12</click_to_event>
+    <image position="0.32 0.5 0.01" fade="0.9" scale="0.16">ct.png</image>
+    
+    <click_to_event slide_name="section mri" layer_name="start">13</click_to_event>
+    <image position="0.505 0.5 0.01" fade="0.9" scale="0.16">mri.png</image>
+    
+    <click_to_event slide_name="section fmri" layer_name="start">14</click_to_event>
+    <image position="0.689 0.5 0.01" fade="0.9" scale="0.16">fmri.png</image>
+    
+    <click_to_event slide_name="section trk" layer_name="start">15</click_to_event>
+    <image position="0.87 0.5 0.01" fade="0.9" scale="0.16">trac.png</image>
+    
+    
+   
+   
+    </layer>
+    
+  </slide>
+  
+  
+  <!-- Vis Human section-->
+<slide slide_name="section vh">
+<duration>18</duration>
+
+
+<!-- VH start - movie - select interactive-->
+<clean_layer inherit="timeout" layer_name="start">
+
+    <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+	
+    
+  
+   
+     <!-- menu -->
+     
+     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+     
+     
+      
+    </clean_layer>
+    
+    
+    
+    <!-- VH tech -->
+<clean_layer inherit="timeout" layer_name="tech">
+
+    <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+ <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+  <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>  
+    
+     
+         
+    <!-- menu -->
+     
+    <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how_alt.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+    </clean_layer>
+    
+    
+        
+    <!-- VH info -->
+<clean_layer inherit="timeout" layer_name="info">
+
+    <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+	 <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+  
+         
+     <!-- menu -->
+     
+   <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what_alt.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+
+    </clean_layer>
+
+
+
+
+<!-- VH ONE interactive-->
+<clean_layer inherit="timeout" layer_name="one">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+
+
+    <!-- menu -->
+     
+     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1_alt.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+  
+    </clean_layer>
+    
+<!-- VH TWO interactive-->    
+<clean_layer inherit="timeout" layer_name="two">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+   
+     
+      <!-- menu -->
+     
+    <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2_alt.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+<!-- VH THREE interactive-->
+<clean_layer inherit="timeout" layer_name="three">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+    
+   
+     
+      <!-- menu -->
+     
+     <click_to_event  slide_name="section vh" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section vh" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section vh" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3_alt.png</image>
+    
+</clean_layer>    
+   
+    
+    
+</slide>
+  
+
+
+<!-- CT section-->
+
+<slide slide_name="section ct">
+<duration>18</duration>
+
+<clean_layer inherit="timeout" layer_name="start">
+
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+
+   
+     <!-- side menu -->
+     
+     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+      <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+    
+    
+    
+    <!-- CT tech -->
+<clean_layer inherit="timeout" layer_name="tech">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+   
+         
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how_alt.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+ </clean_layer>
+    
+    
+    
+        <!-- CT info -->
+<clean_layer inherit="timeout" layer_name="info">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+
+         
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what_alt.png</image>
+     
+       <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+    <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+ </clean_layer>
+
+
+<!-- CT ONE interactive-->
+<clean_layer inherit="timeout" layer_name="one">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+    
+  
+     
+     <!-- side menu -->
+     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1_alt.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+    </clean_layer>
+    
+    
+<!-- CT TWO interactive-->    
+<clean_layer inherit="timeout" layer_name="two">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+     
+     <!-- side menu -->
+     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+          <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+      <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2_alt.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+<!-- CT THREE interactive-->
+<clean_layer inherit="timeout" layer_name="three">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+     
+     <!-- side menu -->
+     <click_to_event  slide_name="section ct" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section ct" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="one">23</click_to_event>
+    <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section ct" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3_alt.png</image>
+     
+</clean_layer>    
+   
+
+</slide>
+
+
+<!-- MRI section-->
+<slide slide_name="section mri">
+<duration>18</duration>
+
+<clean_layer inherit="timeout" layer_name="start">
+ 
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+     <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+   <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+    
+   
+     <!-- side menu -->
+     
+     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+       <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+    </clean_layer>
+    
+    
+    
+<!-- MRI tech -->
+<clean_layer inherit="timeout" layer_name="tech">
+
+    <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+             
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how_alt.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+    
+    
+    <!-- MRI info -->
+<clean_layer inherit="timeout" layer_name="info">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+   <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	 <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+
+         
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what_alt.png</image>
+     
+         <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+</clean_layer>
+
+
+<!-- MRI ONE interactive-->
+<clean_layer inherit="timeout" layer_name="one">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+ <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+      <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1_alt.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+</clean_layer>
+
+    
+<!-- MRI TWO interactive-->    
+<clean_layer inherit="timeout" layer_name="two">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+       <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2_alt.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+<!-- MRI THREE interactive-->
+<clean_layer inherit="timeout" layer_name="three">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.415 0.45 0.01" fade="0.9" scale="0.74">swipe_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section mri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section mri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section mri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3_alt.png</image>
+     
+</clean_layer>    
+   
+
+
+  </slide>
+
+
+<!-- fMRIsection-->
+<slide slide_name="section fmri">
+<duration>18</duration>
+
+<clean_layer inherit="timeout" layer_name="start">
+ 
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+         <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+   <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+
+   
+     <!-- side menu -->
+     
+     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+       <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+    <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+    <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+    </clean_layer>
+    
+    
+    
+    <!-- FMRI tech -->
+<clean_layer inherit="timeout" layer_name="tech">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+   <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+
+         
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how_alt.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+    </clean_layer>
+    
+    
+       
+    <!-- FMRI info -->
+<clean_layer inherit="timeout" layer_name="info">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+    
+         
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what_alt.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+    </clean_layer>
+
+
+
+<!-- FMRI ONE interactive-->
+<clean_layer inherit="timeout" layer_name="one">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+       <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1_alt.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+    </clean_layer>
+    
+<!-- FMRI TWO interactive-->    
+<clean_layer inherit="timeout" layer_name="two">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+     <!-- side menu -->
+     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2_alt.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+<!-- FMRI THREE interactive-->
+<clean_layer inherit="timeout" layer_name="three">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+  <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section fmri" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section fmri" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section fmri" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3_alt.png</image>
+     
+</clean_layer>    
+   
+
+
+</slide>
+
+
+<!-- Tractography section-->
+
+<slide slide_name="section trk">
+<duration>18</duration>
+
+<clean_layer inherit="timeout" layer_name="start">
+ 
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+    
+   
+     <!-- side menu -->
+     
+     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+     <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+    </clean_layer>
+    
+    
+    
+    <!-- TRK tech -->
+<clean_layer inherit="timeout" layer_name="tech">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+    <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+ 
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how_alt.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+      
+</clean_layer>
+    
+        
+    <!-- TRK info -->
+<clean_layer inherit="timeout" layer_name="info">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+  	<image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.55 0.001">select.png</image>
+    
+
+     <!-- side menu -->
+     
+      <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what_alt.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+
+<!-- TRK ONE interactive-->
+<clean_layer inherit="timeout" layer_name="one">
+
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+   <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.415 0.45 0.01" fade="0.9" scale="0.74">swipe_pad.png</image>
+
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+    <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1_alt.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+    </clean_layer>
+    
+<!-- TRK TWO interactive-->    
+<clean_layer inherit="timeout" layer_name="two">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+       <image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+
+     <!-- side menu -->
+     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2_alt.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3.png</image>
+     
+</clean_layer>
+
+
+<!-- TRK THREE interactive-->
+<clean_layer inherit="timeout" layer_name="three">
+     <image hud="on" fade="0.9" scale="1.2" position="0.5 0.5 -0.01"></image>
+	<image hud="on" fade="0.9" scale="1" position="0.5 0.52 0.002">be.png</image>
+     
+	<forward_mouse_event_to_device></forward_mouse_event_to_device> 
+	<image position="0.415 0.45 0.0" fade="0.9" scale="0.74">pad1.png</image>
+	<image position="0.4 0.45 0.01" fade="0.9" scale="0.74">swipe_across_pad.png</image>
+
+    
+     <!-- side menu -->
+     <click_to_event  slide_name="section trk" layer_name="tech">21</click_to_event>
+     <image position="0.2 0.9 0.01" fade="0.9" scale="0.16">how.png</image>
+     
+      <click_to_event  slide_name="section trk" layer_name="info">22</click_to_event>
+     <image position="0.425 0.9 0.01" fade="0.9" fade="0.9" scale="0.16">what.png</image>
+     
+    <click_to_event  slide_name="begin" layer_name="begin">26</click_to_event>
+     <image position="0.65 0.9 0.01" fade="0.9" scale="0.16">choose_b.png</image>
+          
+     <click_to_event  slide_name="section trk" layer_name="one">23</click_to_event>
+     <image position="0.87 0.7 0.01" fade="0.9" scale="0.16">view1.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="two">24</click_to_event>
+     <image position="0.87 0.55 0.01" fade="0.9" scale="0.16">view2.png</image>
+     
+     <click_to_event  slide_name="section trk" layer_name="three">25</click_to_event>
+     <image position="0.87 0.4 0.01" fade="0.9" scale="0.16">view3_alt.png</image>
+
+</clean_layer>    
+   
+
+  </slide>
+
+
+  </presentation>

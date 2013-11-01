@@ -116,7 +116,7 @@ public:
         hudCamera->setRenderOrder(osg::Camera::POST_RENDER);
         hudCamera->setClearMask(GL_DEPTH_BUFFER_BIT);
         
-         osg::Geode* geode = new osg::Geode();
+        osg::Geode* geode = new osg::Geode();
         hudCamera->addChild(geode);
 
         _tg = new osgText::Text();

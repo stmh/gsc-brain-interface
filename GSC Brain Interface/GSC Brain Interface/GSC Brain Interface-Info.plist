@@ -18,17 +18,20 @@
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
-		<key>CFBundlePrimaryIcon</key>
+		<key>UINewsstandIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string></string>
-				<string>ipad-icon.png</string>
-				<string>ipad-icon@2x.png</string>
 			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
+			<key>UINewsstandBindingEdge</key>
+			<string>UINewsstandBindingEdgeLeft</string>
+			<key>UINewsstandBindingType</key>
+			<string>UINewsstandBindingTypeMagazine</string>
 		</dict>
+	</dict>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
 		<key>UINewsstandIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
@@ -76,5 +79,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
